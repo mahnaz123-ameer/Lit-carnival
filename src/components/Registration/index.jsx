@@ -78,70 +78,71 @@ const Registration = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-amber-50 to-orange-50">
-      {/* Header Section */}
+      {/* Header Section - Mobile Responsive */}
       <div className="relative overflow-hidden bg-gradient-to-r from-red-800 via-red-700 to-orange-600 text-white">
         <div className="absolute inset-0 bg-black bg-opacity-20"></div>
-        <div className="relative container mx-auto px-6 py-16">
-          <div className="flex items-center justify-between mb-8">
-            <div className="flex items-center space-x-4">
-              <Trophy className="w-8 h-8 text-yellow-300" />
+        <div className="relative container mx-auto px-4 sm:px-6 py-12 sm:py-16">
+          <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-6 sm:mb-8">
+            <div className="flex items-center space-x-3 sm:space-x-4 mb-4 sm:mb-0">
+              <Trophy className="w-6 h-6 sm:w-8 sm:h-8 text-yellow-300" />
               <div>
-                <h1 className="text-4xl font-bold">Registration</h1>
-                <p className="text-xl text-orange-100">EWU Lit-Carnival 2025</p>
+                <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold">Registration</h1>
+                <p className="text-lg sm:text-xl text-orange-100">EWU Lit-Carnival 2025</p>
               </div>
             </div>
-            <div className="hidden md:block">
-              <div className="bg-white bg-opacity-20 rounded-lg p-4 backdrop-blur-sm">
+            <div className="sm:block">
+              <div className="bg-white bg-opacity-20 rounded-lg p-3 sm:p-4 backdrop-blur-sm">
                 <div className="flex items-center space-x-2 text-yellow-200">
-                  <Calendar className="w-5 h-5" />
-                  <span className="font-semibold">October 16, 2025</span>
+                  <Calendar className="w-4 h-4 sm:w-5 sm:h-5" />
+                  <span className="font-semibold text-sm sm:text-base">October 16, 2025</span>
                 </div>
               </div>
             </div>
           </div>
-          <p className="text-lg text-orange-100 max-w-3xl">
+          <p className="text-base sm:text-lg text-orange-100 max-w-3xl">
             Join the whirlwind of words, rhymes, and costumes! Register now to secure your spot in Bangladesh's most exciting inter-university literary competition.
           </p>
         </div>
-        <div className="absolute top-0 right-0 w-64 h-64 bg-yellow-400 bg-opacity-10 rounded-full -mr-32 -mt-32"></div>
-        <div className="absolute bottom-0 left-0 w-48 h-48 bg-orange-400 bg-opacity-10 rounded-full -ml-24 -mb-24"></div>
+        {/* Background decorations - hidden on small screens */}
+        <div className="absolute top-0 right-0 w-32 h-32 sm:w-64 sm:h-64 bg-yellow-400 bg-opacity-10 rounded-full -mr-16 sm:-mr-32 -mt-16 sm:-mt-32"></div>
+        <div className="absolute bottom-0 left-0 w-24 h-24 sm:w-48 sm:h-48 bg-orange-400 bg-opacity-10 rounded-full -ml-12 sm:-ml-24 -mb-12 sm:-mb-24"></div>
       </div>
 
-      <div className="container mx-auto px-6 py-8">
+      <div className="container mx-auto px-4 sm:px-6 py-6 sm:py-8">
         
-        {/* Important Dates */}
-        <div className="bg-gradient-to-r from-red-700 via-red-600 to-amber-600 text-white rounded-2xl p-8 mb-8 shadow-xl border-2 border-red-800">
-          <div className="flex items-center justify-center mb-6">
-            <AlertCircle className="w-6 h-6 mr-2" />
-            <h2 className="text-3xl font-bold">Important Dates</h2>
+        {/* Important Dates - Mobile Responsive */}
+        <div className="bg-gradient-to-r from-red-700 via-red-600 to-amber-600 text-white rounded-xl sm:rounded-2xl p-6 sm:p-8 mb-6 sm:mb-8 shadow-xl border-2 border-red-800">
+          <div className="flex items-center justify-center mb-4 sm:mb-6">
+            <AlertCircle className="w-5 h-5 sm:w-6 sm:h-6 mr-2" />
+            <h2 className="text-2xl sm:text-3xl font-bold">Important Dates</h2>
           </div>
-          <div className="grid md:grid-cols-2 gap-6 text-center">
-            <div className="bg-white bg-opacity-20 rounded-lg p-6 backdrop-blur-sm border border-amber-200">
-              <Calendar className="w-10 h-10 mx-auto mb-3 text-yellow-300" />
-              <div className="font-bold text-lg mb-1">Registration Deadline</div>
-              <div className="text-2xl font-bold text-yellow-200">August 20, 2025</div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6 text-center">
+            <div className="bg-white bg-opacity-20 rounded-lg p-4 sm:p-6 backdrop-blur-sm border border-amber-200">
+              <Calendar className="w-8 h-8 sm:w-10 sm:h-10 mx-auto mb-2 sm:mb-3 text-yellow-300" />
+              <div className="font-bold text-base sm:text-lg mb-1">Registration Deadline</div>
+              <div className="text-xl sm:text-2xl font-bold text-yellow-200">August 20, 2025</div>
             </div>
-            <div className="bg-white bg-opacity-20 rounded-lg p-6 backdrop-blur-sm border border-amber-200">
-              <Clock className="w-10 h-10 mx-auto mb-3 text-yellow-300" />
-              <div className="font-bold text-lg mb-1">Event Date</div>
-              <div className="text-2xl font-bold text-yellow-200">October 16, 2025</div>
+            <div className="bg-white bg-opacity-20 rounded-lg p-4 sm:p-6 backdrop-blur-sm border border-amber-200">
+              <Clock className="w-8 h-8 sm:w-10 sm:h-10 mx-auto mb-2 sm:mb-3 text-yellow-300" />
+              <div className="font-bold text-base sm:text-lg mb-1">Event Date</div>
+              <div className="text-xl sm:text-2xl font-bold text-yellow-200">October 16, 2025</div>
             </div>
           </div>
         </div>
 
-        {/* Competition Segments */}
-        <div className="bg-gradient-to-br from-amber-50 to-orange-50 rounded-2xl shadow-xl p-8 mb-8 border-2 border-amber-300">
-          <div className="text-center mb-8">
-            <Trophy className="w-16 h-16 mx-auto text-red-700 mb-4" />
-            <h3 className="text-4xl font-bold text-amber-900 mb-3">Competition Segments</h3>
-            <p className="text-lg text-amber-700">Select the segments you want to participate in</p>
+        {/* Competition Segments - Mobile Responsive */}
+        <div className="bg-gradient-to-br from-amber-50 to-orange-50 rounded-xl sm:rounded-2xl shadow-xl p-6 sm:p-8 mb-6 sm:mb-8 border-2 border-amber-300">
+          <div className="text-center mb-6 sm:mb-8">
+            <Trophy className="w-12 h-12 sm:w-16 sm:h-16 mx-auto text-red-700 mb-3 sm:mb-4" />
+            <h3 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-amber-900 mb-2 sm:mb-3">Competition Segments</h3>
+            <p className="text-base sm:text-lg text-amber-700">Select the segments you want to participate in</p>
           </div>
           
-          <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-6 mb-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-4 sm:gap-6 mb-6 sm:mb-8">
             {segments.map((segment) => (
               <div 
                 key={segment.id} 
-                className={`relative border-2 rounded-xl p-6 cursor-pointer transition-all duration-300 transform hover:scale-105 ${
+                className={`relative border-2 rounded-lg sm:rounded-xl p-4 sm:p-6 cursor-pointer transition-all duration-300 transform hover:scale-105 ${
                   selectedSegments.includes(segment.id) 
                     ? 'border-red-600 bg-gradient-to-br from-red-50 to-amber-50 shadow-lg' 
                     : 'border-amber-300 bg-white hover:border-red-400 hover:shadow-md'
@@ -149,12 +150,12 @@ const Registration = () => {
                 onClick={() => handleSegmentChange(segment.id)}
               >
                 <div className="text-center">
-                  <div className="text-4xl mb-3">{segment.icon}</div>
-                  <h4 className="font-bold text-lg text-amber-900 mb-2">{segment.name}</h4>
-                  <p className="text-sm text-amber-700 mb-4">{segment.description}</p>
+                  <div className="text-3xl sm:text-4xl mb-2 sm:mb-3">{segment.icon}</div>
+                  <h4 className="font-bold text-base sm:text-lg text-amber-900 mb-2">{segment.name}</h4>
+                  <p className="text-xs sm:text-sm text-amber-700 mb-3 sm:mb-4 leading-tight">{segment.description}</p>
                   
-                  <div className="mb-4">
-                    <div className="text-2xl font-bold text-red-700">
+                  <div className="mb-3 sm:mb-4">
+                    <div className="text-xl sm:text-2xl font-bold text-red-700">
                       ৳{segment.fee}
                     </div>
                     <div className="text-xs text-amber-600">
@@ -176,38 +177,38 @@ const Registration = () => {
                 </div>
                 
                 {selectedSegments.includes(segment.id) && (
-                  <div className="absolute top-3 right-3">
-                    <CheckCircle className="w-7 h-7 text-green-600" />
+                  <div className="absolute top-2 sm:top-3 right-2 sm:right-3">
+                    <CheckCircle className="w-6 h-6 sm:w-7 sm:h-7 text-green-600" />
                   </div>
                 )}
               </div>
             ))}
           </div>
 
-          {/* Total Cost */}
+          {/* Total Cost - Mobile Responsive */}
           {selectedSegments.length > 0 && (
-            <div className="bg-gradient-to-r from-amber-100 to-orange-100 border-2 border-amber-400 rounded-xl p-6 mb-8 shadow-lg">
-              <h4 className="text-2xl font-bold text-amber-900 mb-4 flex items-center">
-                <DollarSign className="w-7 h-7 mr-2" />
+            <div className="bg-gradient-to-r from-amber-100 to-orange-100 border-2 border-amber-400 rounded-lg sm:rounded-xl p-4 sm:p-6 mb-6 sm:mb-8 shadow-lg">
+              <h4 className="text-xl sm:text-2xl font-bold text-amber-900 mb-3 sm:mb-4 flex items-center">
+                <DollarSign className="w-6 h-6 sm:w-7 sm:h-7 mr-2" />
                 Total Registration Cost
               </h4>
-              <div className="space-y-3">
+              <div className="space-y-2 sm:space-y-3">
                 {selectedSegments.map(segmentId => {
                   const segment = segments.find(s => s.id === segmentId);
                   return (
-                    <div key={segmentId} className="flex justify-between items-center bg-white bg-opacity-60 p-3 rounded-lg">
+                    <div key={segmentId} className="flex justify-between items-center bg-white bg-opacity-60 p-2 sm:p-3 rounded-lg">
                       <span className="flex items-center">
-                        <span className="text-2xl mr-3">{segment.icon}</span>
-                        <span className="font-medium text-amber-900">{segment.name}</span>
+                        <span className="text-xl sm:text-2xl mr-2 sm:mr-3">{segment.icon}</span>
+                        <span className="font-medium text-amber-900 text-sm sm:text-base">{segment.name}</span>
                       </span>
-                      <span className="font-bold text-red-700 text-lg">
+                      <span className="font-bold text-red-700 text-base sm:text-lg">
                         ৳{segment.fee}
                       </span>
                     </div>
                   );
                 })}
-                <div className="border-t-2 border-amber-400 pt-4 mt-4">
-                  <div className="flex justify-between items-center text-2xl font-bold text-red-700 bg-white bg-opacity-80 p-4 rounded-lg">
+                <div className="border-t-2 border-amber-400 pt-3 sm:pt-4 mt-3 sm:mt-4">
+                  <div className="flex justify-between items-center text-xl sm:text-2xl font-bold text-red-700 bg-white bg-opacity-80 p-3 sm:p-4 rounded-lg">
                     <span>TOTAL:</span>
                     <span>৳{calculateTotal()}</span>
                   </div>
@@ -216,37 +217,37 @@ const Registration = () => {
             </div>
           )}
 
-          {/* Register Button */}
+          {/* Register Button - Mobile Responsive */}
           <div className="text-center">
             <button
               onClick={handleRegistrationClick}
               disabled={selectedSegments.length === 0}
-              className="bg-gradient-to-r from-red-700 to-amber-600 text-white px-10 py-4 rounded-xl font-bold text-xl shadow-lg hover:shadow-xl transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed flex items-center mx-auto hover:scale-105"
+              className="bg-gradient-to-r from-red-700 to-amber-600 text-white px-8 sm:px-10 py-3 sm:py-4 rounded-lg sm:rounded-xl font-bold text-lg sm:text-xl shadow-lg hover:shadow-xl transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed flex items-center mx-auto hover:scale-105 w-full sm:w-auto justify-center"
             >
               Register Now
-              <ExternalLink className="w-6 h-6 ml-2" />
+              <ExternalLink className="w-5 h-5 sm:w-6 sm:h-6 ml-2" />
             </button>
             {selectedSegments.length === 0 && (
-              <p className="text-amber-600 mt-3 font-medium">Please select at least one segment</p>
+              <p className="text-amber-600 mt-2 sm:mt-3 font-medium text-sm sm:text-base">Please select at least one segment</p>
             )}
           </div>
         </div>
 
-        {/* Contact Information */}
-        <div className="grid md:grid-cols-2 xl:grid-cols-4 gap-6">
+        {/* Contact Information - Mobile Responsive Grid */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-4 sm:gap-6">
           {/* Registration Rules */}
-          <div className="bg-gradient-to-br from-amber-50 to-orange-50 rounded-xl shadow-lg p-6 border-2 border-amber-300">
-            <h3 className="text-xl font-bold text-amber-900 mb-4">Registration Rules</h3>
-            <div className="space-y-3 text-sm">
-              <div className="bg-white bg-opacity-80 p-3 rounded-lg border border-amber-200">
+          <div className="bg-gradient-to-br from-amber-50 to-orange-50 rounded-lg sm:rounded-xl shadow-lg p-4 sm:p-6 border-2 border-amber-300">
+            <h3 className="text-lg sm:text-xl font-bold text-amber-900 mb-3 sm:mb-4">Registration Rules</h3>
+            <div className="space-y-2 sm:space-y-3 text-xs sm:text-sm">
+              <div className="bg-white bg-opacity-80 p-2 sm:p-3 rounded-lg border border-amber-200">
                 <strong className="text-amber-900">Fees:</strong>
                 <div className="text-amber-800">Drama: ৳1,020 | Others: ৳205 each</div>
               </div>
-              <div className="bg-white bg-opacity-80 p-3 rounded-lg border border-amber-200">
+              <div className="bg-white bg-opacity-80 p-2 sm:p-3 rounded-lg border border-amber-200">
                 <strong className="text-amber-900">Payment:</strong>
                 <div className="text-amber-800">Separate payment required for each segment</div>
               </div>
-              <div className="bg-white bg-opacity-80 p-3 rounded-lg border border-amber-200">
+              <div className="bg-white bg-opacity-80 p-2 sm:p-3 rounded-lg border border-amber-200">
                 <strong className="text-amber-900">Processing:</strong>
                 <div className="text-amber-800">All fees include bKash transaction charges</div>
               </div>
@@ -254,39 +255,39 @@ const Registration = () => {
           </div>
 
           {/* Contact Info */}
-          <div className="bg-gradient-to-br from-amber-50 to-orange-50 rounded-xl shadow-lg p-6 border-2 border-amber-300">
-            <h3 className="text-xl font-bold text-amber-900 mb-4">Contact Information</h3>
-            <div className="space-y-4">
-              <div className="flex items-center bg-white bg-opacity-80 p-3 rounded-lg border border-amber-200">
-                <Mail className="w-6 h-6 mr-3 text-red-700" />
+          <div className="bg-gradient-to-br from-amber-50 to-orange-50 rounded-lg sm:rounded-xl shadow-lg p-4 sm:p-6 border-2 border-amber-300">
+            <h3 className="text-lg sm:text-xl font-bold text-amber-900 mb-3 sm:mb-4">Contact Information</h3>
+            <div className="space-y-3 sm:space-y-4">
+              <div className="flex items-center bg-white bg-opacity-80 p-2 sm:p-3 rounded-lg border border-amber-200">
+                <Mail className="w-5 h-5 sm:w-6 sm:h-6 mr-2 sm:mr-3 text-red-700 flex-shrink-0" />
                 <div>
-                  <div className="font-semibold text-amber-900">Email</div>
-                  <div className="text-sm text-amber-700">lit-carnival@ewubd.edu</div>
+                  <div className="font-semibold text-amber-900 text-sm sm:text-base">Email</div>
+                  <div className="text-xs sm:text-sm text-amber-700">lit-carnival@ewubd.edu</div>
                 </div>
               </div>
-              <div className="flex items-center bg-white bg-opacity-80 p-3 rounded-lg border border-amber-200">
-                <Phone className="w-6 h-6 mr-3 text-red-700" />
+              <div className="flex items-center bg-white bg-opacity-80 p-2 sm:p-3 rounded-lg border border-amber-200">
+                <Phone className="w-5 h-5 sm:w-6 sm:h-6 mr-2 sm:mr-3 text-red-700 flex-shrink-0" />
                 <div>
-                  <div className="font-semibold text-amber-900">Support</div>
-                  <div className="text-sm text-amber-700">Available during office hours</div>
+                  <div className="font-semibold text-amber-900 text-sm sm:text-base">Support</div>
+                  <div className="text-xs sm:text-sm text-amber-700">Available during office hours</div>
                 </div>
               </div>
             </div>
           </div>
 
           {/* Event Details */}
-          <div className="bg-gradient-to-br from-amber-50 to-orange-50 rounded-xl shadow-lg p-6 border-2 border-amber-300">
-            <h3 className="text-xl font-bold text-amber-900 mb-4">Event Details</h3>
-            <div className="space-y-3 text-sm">
-              <div className="bg-white bg-opacity-80 p-3 rounded-lg border border-amber-200">
+          <div className="bg-gradient-to-br from-amber-50 to-orange-50 rounded-lg sm:rounded-xl shadow-lg p-4 sm:p-6 border-2 border-amber-300">
+            <h3 className="text-lg sm:text-xl font-bold text-amber-900 mb-3 sm:mb-4">Event Details</h3>
+            <div className="space-y-2 sm:space-y-3 text-xs sm:text-sm">
+              <div className="bg-white bg-opacity-80 p-2 sm:p-3 rounded-lg border border-amber-200">
                 <strong className="text-amber-900">Venue:</strong>
                 <div className="text-amber-800">East West University Campus</div>
               </div>
-              <div className="bg-white bg-opacity-80 p-3 rounded-lg border border-amber-200">
+              <div className="bg-white bg-opacity-80 p-2 sm:p-3 rounded-lg border border-amber-200">
                 <strong className="text-amber-900">Duration:</strong>
                 <div className="text-amber-800">Full Day Event</div>
               </div>
-              <div className="bg-white bg-opacity-80 p-3 rounded-lg border border-amber-200">
+              <div className="bg-white bg-opacity-80 p-2 sm:p-3 rounded-lg border border-amber-200">
                 <strong className="text-amber-900">Audience:</strong>
                 <div className="text-amber-800">University Students Nationwide</div>
               </div>
@@ -294,18 +295,18 @@ const Registration = () => {
           </div>
 
           {/* Prizes */}
-          <div className="bg-gradient-to-br from-amber-50 to-orange-50 rounded-xl shadow-lg p-6 border-2 border-amber-300">
-            <h3 className="text-xl font-bold text-amber-900 mb-4">Prizes & Recognition</h3>
-            <div className="space-y-3 text-sm">
-              <div className="bg-white bg-opacity-80 p-3 rounded-lg border border-amber-200">
+          <div className="bg-gradient-to-br from-amber-50 to-orange-50 rounded-lg sm:rounded-xl shadow-lg p-4 sm:p-6 border-2 border-amber-300">
+            <h3 className="text-lg sm:text-xl font-bold text-amber-900 mb-3 sm:mb-4">Prizes & Recognition</h3>
+            <div className="space-y-2 sm:space-y-3 text-xs sm:text-sm">
+              <div className="bg-white bg-opacity-80 p-2 sm:p-3 rounded-lg border border-amber-200">
                 <strong className="text-amber-900">Winners:</strong>
                 <div className="text-amber-800">Cash prizes & certificates</div>
               </div>
-              <div className="bg-white bg-opacity-80 p-3 rounded-lg border border-amber-200">
+              <div className="bg-white bg-opacity-80 p-2 sm:p-3 rounded-lg border border-amber-200">
                 <strong className="text-amber-900">Recognition:</strong>
                 <div className="text-amber-800">University-wide acclaim</div>
               </div>
-              <div className="bg-white bg-opacity-80 p-3 rounded-lg border border-amber-200">
+              <div className="bg-white bg-opacity-80 p-2 sm:p-3 rounded-lg border border-amber-200">
                 <strong className="text-amber-900">Networking:</strong>
                 <div className="text-amber-800">Connect with literary enthusiasts</div>
               </div>
