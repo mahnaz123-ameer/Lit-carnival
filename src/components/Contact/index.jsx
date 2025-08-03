@@ -128,107 +128,107 @@ const ContactUs = () => {
       {/* Header */}
       <div className="relative overflow-hidden bg-gradient-to-r from-red-800 via-red-700 to-orange-600 text-white">
         <div className="absolute inset-0 bg-black bg-opacity-20"></div>
-        <div className="relative container mx-auto px-6 py-16">
-          <div className="flex items-center justify-between mb-8">
-            <div className="flex items-center space-x-4">
-              <Sparkles className="w-8 h-8 text-yellow-300" />
+        <div className="relative container mx-auto px-4 sm:px-6 py-8 sm:py-12 lg:py-16">
+          <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between mb-6 sm:mb-8 space-y-4 sm:space-y-0">
+            <div className="flex items-center space-x-3 sm:space-x-4">
+              <Sparkles className="w-6 h-6 sm:w-8 sm:h-8 text-yellow-300 flex-shrink-0" />
               <div>
-                <h1 className="text-4xl font-bold">Contact Us</h1>
-                <p className="text-xl text-orange-100">EWU Lit-Carnival 2025</p>
+                <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold">Contact Us</h1>
+                <p className="text-lg sm:text-xl text-orange-100">EWU Lit-Carnival 2025</p>
               </div>
             </div>
-            <div className="hidden md:block">
-              <div className="bg-white bg-opacity-20 rounded-lg p-4 backdrop-blur-sm">
+            <div className="w-full sm:w-auto">
+              <div className="bg-white bg-opacity-20 rounded-lg p-3 sm:p-4 backdrop-blur-sm">
                 <div className="flex items-center space-x-2 text-yellow-200">
-                  <Calendar className="w-5 h-5" />
-                  <span className="font-semibold">October 16, 2025</span>
+                  <Calendar className="w-4 h-4 sm:w-5 sm:h-5 flex-shrink-0" />
+                  <span className="font-semibold text-sm sm:text-base">October 16, 2025</span>
                 </div>
               </div>
             </div>
           </div>
-          <p className="text-lg text-orange-100 max-w-3xl">
+          <p className="text-base sm:text-lg text-orange-100 max-w-full lg:max-w-3xl">
             Have questions about the inter-university literary competition? We're here to help you join this whirlwind of words, rhymes, and costumes!
           </p>
         </div>
-        <div className="absolute top-0 right-0 w-64 h-64 bg-yellow-400 bg-opacity-10 rounded-full -mr-32 -mt-32"></div>
-        <div className="absolute bottom-0 left-0 w-48 h-48 bg-orange-400 bg-opacity-10 rounded-full -ml-24 -mb-24"></div>
+        <div className="absolute top-0 right-0 w-32 h-32 sm:w-48 sm:h-48 lg:w-64 lg:h-64 bg-yellow-400 bg-opacity-10 rounded-full -mr-16 sm:-mr-24 lg:-mr-32 -mt-16 sm:-mt-24 lg:-mt-32"></div>
+        <div className="absolute bottom-0 left-0 w-24 h-24 sm:w-36 sm:h-36 lg:w-48 lg:h-48 bg-orange-400 bg-opacity-10 rounded-full -ml-12 sm:-ml-18 lg:-ml-24 -mb-12 sm:-mb-18 lg:-mb-24"></div>
       </div>
 
-      <div className="container mx-auto px-6 py-12">
-        <div className="grid lg:grid-cols-3 gap-12">
+      <div className="container mx-auto px-4 sm:px-6 py-8 sm:py-12">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-12">
           
           {/* Contact Information */}
-          <div className="lg:col-span-1 space-y-8">
-            <div className="bg-white rounded-2xl shadow-xl p-8 border border-orange-100">
-              <h2 className="text-2xl font-bold text-gray-800 mb-6 flex items-center">
-                <Star className="w-6 h-6 text-yellow-500 mr-2" />
+          <div className="lg:col-span-1 space-y-6 sm:space-y-8">
+            <div className="bg-white rounded-2xl shadow-xl p-6 sm:p-8 border border-orange-100">
+              <h2 className="text-xl sm:text-2xl font-bold text-gray-800 mb-4 sm:mb-6 flex items-center">
+                <Star className="w-5 h-5 sm:w-6 sm:h-6 text-yellow-500 mr-2 flex-shrink-0" />
                 Event Details
               </h2>
               
-              <div className="space-y-6">
-                <div className="flex items-start space-x-4">
-                  <div className="bg-red-100 p-3 rounded-lg">
-                    <Calendar className="w-6 h-6 text-red-600" />
+              <div className="space-y-4 sm:space-y-6">
+                <div className="flex items-start space-x-3 sm:space-x-4">
+                  <div className="bg-red-100 p-2 sm:p-3 rounded-lg flex-shrink-0">
+                    <Calendar className="w-5 h-5 sm:w-6 sm:h-6 text-red-600" />
                   </div>
-                  <div>
-                    <h3 className="font-semibold text-gray-800">Event Date</h3>
-                    <p className="text-gray-600">October 16, 2025</p>
-                  </div>
-                </div>
-
-                <div className="flex items-start space-x-4">
-                  <div className="bg-orange-100 p-3 rounded-lg">
-                    <MapPin className="w-6 h-6 text-orange-600" />
-                  </div>
-                  <div>
-                    <h3 className="font-semibold text-gray-800">Venue</h3>
-                    <p className="text-gray-600">East West University<br />Dhaka, Bangladesh</p>
+                  <div className="min-w-0 flex-1">
+                    <h3 className="font-semibold text-gray-800 text-sm sm:text-base">Event Date</h3>
+                    <p className="text-gray-600 text-sm sm:text-base">October 16, 2025</p>
                   </div>
                 </div>
 
-                <div className="flex items-start space-x-4">
-                  <div className="bg-yellow-100 p-3 rounded-lg">
-                    <Clock className="w-6 h-6 text-yellow-600" />
+                <div className="flex items-start space-x-3 sm:space-x-4">
+                  <div className="bg-orange-100 p-2 sm:p-3 rounded-lg flex-shrink-0">
+                    <MapPin className="w-5 h-5 sm:w-6 sm:h-6 text-orange-600" />
                   </div>
-                  <div>
-                    <h3 className="font-semibold text-gray-800">Registration Deadline</h3>
-                    <p className="text-gray-600">August 20, 2025</p>
+                  <div className="min-w-0 flex-1">
+                    <h3 className="font-semibold text-gray-800 text-sm sm:text-base">Venue</h3>
+                    <p className="text-gray-600 text-sm sm:text-base">East West University<br />Dhaka, Bangladesh</p>
                   </div>
                 </div>
 
-                <div className="flex items-start space-x-4">
-                  <div className="bg-green-100 p-3 rounded-lg">
-                    <Mail className="w-6 h-6 text-green-600" />
+                <div className="flex items-start space-x-3 sm:space-x-4">
+                  <div className="bg-yellow-100 p-2 sm:p-3 rounded-lg flex-shrink-0">
+                    <Clock className="w-5 h-5 sm:w-6 sm:h-6 text-yellow-600" />
                   </div>
-                  <div>
-                    <h3 className="font-semibold text-gray-800">Email</h3>
-                    <p className="text-gray-600">lit-carnival@ewubd.edu</p>
+                  <div className="min-w-0 flex-1">
+                    <h3 className="font-semibold text-gray-800 text-sm sm:text-base">Registration Deadline</h3>
+                    <p className="text-gray-600 text-sm sm:text-base">August 20, 2025</p>
+                  </div>
+                </div>
+
+                <div className="flex items-start space-x-3 sm:space-x-4">
+                  <div className="bg-green-100 p-2 sm:p-3 rounded-lg flex-shrink-0">
+                    <Mail className="w-5 h-5 sm:w-6 sm:h-6 text-green-600" />
+                  </div>
+                  <div className="min-w-0 flex-1">
+                    <h3 className="font-semibold text-gray-800 text-sm sm:text-base">Email</h3>
+                    <p className="text-gray-600 text-sm sm:text-base break-all">lit-carnival@ewubd.edu</p>
                   </div>
                 </div>
               </div>
             </div>
 
             {/* Registration Fees */}
-            <div className="bg-gradient-to-br from-amber-50 to-orange-50 rounded-2xl shadow-lg p-8 border border-orange-200">
-              <h3 className="text-xl font-bold text-gray-800 mb-4 flex items-center">
-                <Users className="w-5 h-5 text-amber-600 mr-2" />
+            <div className="bg-gradient-to-br from-amber-50 to-orange-50 rounded-2xl shadow-lg p-6 sm:p-8 border border-orange-200">
+              <h3 className="text-lg sm:text-xl font-bold text-gray-800 mb-3 sm:mb-4 flex items-center">
+                <Users className="w-4 h-4 sm:w-5 sm:h-5 text-amber-600 mr-2 flex-shrink-0" />
                 Registration Fees
               </h3>
-              <div className="space-y-3">
+              <div className="space-y-2 sm:space-y-3">
                 <div className="flex justify-between items-center">
-                  <span className="text-gray-700">Drama Team</span>
-                  <span className="font-semibold text-amber-700">Tk. 1000</span>
+                  <span className="text-gray-700 text-sm sm:text-base">Drama Team</span>
+                  <span className="font-semibold text-amber-700 text-sm sm:text-base">Tk. 1000</span>
                 </div>
                 <div className="flex justify-between items-center">
-                  <span className="text-gray-700">Individual Segments</span>
-                  <span className="font-semibold text-amber-700">Tk. 200</span>
+                  <span className="text-gray-700 text-sm sm:text-base">Individual Segments</span>
+                  <span className="font-semibold text-amber-700 text-sm sm:text-base">Tk. 200</span>
                 </div>
               </div>
             </div>
 
             {/* Quick Info */}
-            <div className="bg-gradient-to-br from-red-50 to-orange-50 rounded-2xl shadow-lg p-6 border border-red-200">
-              <h3 className="text-lg font-bold text-gray-800 mb-3">Quick Reminder</h3>
+            <div className="bg-gradient-to-br from-red-50 to-orange-50 rounded-2xl shadow-lg p-4 sm:p-6 border border-red-200">
+              <h3 className="text-base sm:text-lg font-bold text-gray-800 mb-2 sm:mb-3">Quick Reminder</h3>
               <p className="text-gray-700 text-sm">
                 Spots are limited! Register early to secure your participation in this celebration of literature and creativity.
               </p>
@@ -237,27 +237,27 @@ const ContactUs = () => {
 
           {/* Contact Form */}
           <div className="lg:col-span-2">
-            <div className="bg-white rounded-2xl shadow-xl p-8 border border-orange-100">
-              <h2 className="text-2xl font-bold text-gray-800 mb-6">Send us a Message</h2>
+            <div className="bg-white rounded-2xl shadow-xl p-6 sm:p-8 border border-orange-100">
+              <h2 className="text-xl sm:text-2xl font-bold text-gray-800 mb-4 sm:mb-6">Send us a Message</h2>
               
               {/* Status Messages */}
               {submitStatus === 'success' && (
-                <div className="mb-6 p-4 bg-green-100 border border-green-400 text-green-700 rounded-lg">
+                <div className="mb-4 sm:mb-6 p-3 sm:p-4 bg-green-100 border border-green-400 text-green-700 rounded-lg text-sm sm:text-base">
                   ✅ Message sent successfully! We'll get back to you soon.
                 </div>
               )}
               
               {submitStatus === 'error' && (
-                <div className="mb-6 p-4 bg-red-100 border border-red-400 text-red-700 rounded-lg">
+                <div className="mb-4 sm:mb-6 p-3 sm:p-4 bg-red-100 border border-red-400 text-red-700 rounded-lg text-sm sm:text-base">
                   <div className="font-semibold">❌ Failed to send message</div>
-                  {errorDetails && <div className="mt-2 text-sm">{errorDetails}</div>}
-                  <div className="mt-2 text-sm">Please try again or contact us directly at voltixtechsolutions@gmail.com</div>
+                  {errorDetails && <div className="mt-2 text-xs sm:text-sm">{errorDetails}</div>}
+                  <div className="mt-2 text-xs sm:text-sm">Please try again or contact us directly at voltixtechsolutions@gmail.com</div>
                 </div>
               )}
               
-              <div ref={form} onSubmit={handleSubmit}>
-                <div className="space-y-6">
-                  <div className="grid md:grid-cols-2 gap-6">
+              <div onSubmit={handleSubmit}>
+                <div className="space-y-4 sm:space-y-6">
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
                     <div>
                       <label className="block text-sm font-medium text-gray-700 mb-2">
                         Full Name *
@@ -269,7 +269,7 @@ const ContactUs = () => {
                         onChange={handleInputChange}
                         required
                         disabled={isSubmitting}
-                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-500 focus:border-transparent transition-all disabled:opacity-50"
+                        className="w-full px-3 sm:px-4 py-2 sm:py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-500 focus:border-transparent transition-all disabled:opacity-50 text-sm sm:text-base"
                         placeholder="Enter your name"
                       />
                     </div>
@@ -285,13 +285,13 @@ const ContactUs = () => {
                         onChange={handleInputChange}
                         required
                         disabled={isSubmitting}
-                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-500 focus:border-transparent transition-all disabled:opacity-50"
+                        className="w-full px-3 sm:px-4 py-2 sm:py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-500 focus:border-transparent transition-all disabled:opacity-50 text-sm sm:text-base"
                         placeholder="Enter your email"
                       />
                     </div>
                   </div>
 
-                  <div className="grid md:grid-cols-2 gap-6">
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
                     <div>
                       <label className="block text-sm font-medium text-gray-700 mb-2">
                         University
@@ -302,7 +302,7 @@ const ContactUs = () => {
                         value={formData.university}
                         onChange={handleInputChange}
                         disabled={isSubmitting}
-                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-500 focus:border-transparent transition-all disabled:opacity-50"
+                        className="w-full px-3 sm:px-4 py-2 sm:py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-500 focus:border-transparent transition-all disabled:opacity-50 text-sm sm:text-base"
                         placeholder="Your university name"
                       />
                     </div>
@@ -316,7 +316,7 @@ const ContactUs = () => {
                         value={formData.segment}
                         onChange={handleInputChange}
                         disabled={isSubmitting}
-                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-500 focus:border-transparent transition-all disabled:opacity-50"
+                        className="w-full px-3 sm:px-4 py-2 sm:py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-500 focus:border-transparent transition-all disabled:opacity-50 text-sm sm:text-base"
                       >
                         <option value="">Select a segment</option>
                         <option value="drama">Drama</option>
@@ -336,28 +336,27 @@ const ContactUs = () => {
                       name="message"
                       value={formData.message}
                       onChange={handleInputChange}
-                      rows={6}
+                      rows={5}
                       required
                       disabled={isSubmitting}
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-500 focus:border-transparent transition-all disabled:opacity-50"
+                      className="w-full px-3 sm:px-4 py-2 sm:py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-500 focus:border-transparent transition-all disabled:opacity-50 text-sm sm:text-base resize-y"
                       placeholder="Tell us about your questions, ideas, or how we can help you..."
                     ></textarea>
                   </div>
 
                   <button
                     type="submit"
-                    onClick={handleSubmit}
                     disabled={isSubmitting}
-                    className="w-full bg-gradient-to-r from-red-600 to-orange-600 text-white py-4 px-6 rounded-lg font-medium hover:from-red-700 hover:to-orange-700 transform hover:scale-105 transition-all duration-200 shadow-lg disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none flex items-center justify-center space-x-2"
+                    className="w-full bg-gradient-to-r from-red-600 to-orange-600 text-white py-3 sm:py-4 px-4 sm:px-6 rounded-lg font-medium hover:from-red-700 hover:to-orange-700 transform hover:scale-105 transition-all duration-200 shadow-lg disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none flex items-center justify-center space-x-2 text-sm sm:text-base"
                   >
                     {isSubmitting ? (
                       <>
-                        <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white"></div>
+                        <div className="animate-spin rounded-full h-4 w-4 sm:h-5 sm:w-5 border-b-2 border-white"></div>
                         <span>Sending...</span>
                       </>
                     ) : (
                       <>
-                        <Send className="w-5 h-5" />
+                        <Send className="w-4 h-4 sm:w-5 sm:h-5" />
                         <span>Send Message</span>
                       </>
                     )}
@@ -366,17 +365,13 @@ const ContactUs = () => {
               </div>
             </div>
 
-           
-
-           
-
             {/* Additional Info */}
-            <div className="mt-8 bg-gradient-to-r from-amber-100 to-orange-100 rounded-2xl p-6 border border-amber-200">
-              <h3 className="text-lg font-bold text-gray-800 mb-3">Need More Information?</h3>
-              <p className="text-gray-700 mb-4">
+            <div className="mt-6 sm:mt-8 bg-gradient-to-r from-amber-100 to-orange-100 rounded-2xl p-4 sm:p-6 border border-amber-200">
+              <h3 className="text-base sm:text-lg font-bold text-gray-800 mb-2 sm:mb-3">Need More Information?</h3>
+              <p className="text-gray-700 mb-3 sm:mb-4 text-sm sm:text-base">
                 Stay tuned for more information on segments, schedules, and updates. Follow our official channels for the latest announcements about this exciting literary celebration!
               </p>
-              <p className="text-sm text-gray-600">
+              <p className="text-xs sm:text-sm text-gray-600">
                 <strong>Organized by:</strong> Department of English, East West University
               </p>
             </div>
