@@ -1,0 +1,38 @@
+/* New map section styles. Might have to remove later */
+.leaflet-container,
+.leaflet-pane,
+.leaflet-marker-pane,
+.leaflet-popup-pane {
+  overflow: visible !important;
+}
+
+/* New map section styles. Might have to remove later */
+.leaflet-control-zoom {
+  margin-top: 80px !important;
+}
+
+/* Two-line ellipsis for text overflow */
+.two-line-ellipsis {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: normal;
+}
+
+.always-show-scrollbar {
+  scrollbar-width: thin; /* For Firefox */
+  scrollbar-color: #e5e7eb #f9fafb; /* thumb and track color for Firefox */
+  overflow-y: scroll !important; /* Always show vertical scrollbar */
+}
+
+.always-show-scrollbar::-webkit-scrollbar {
+  width: 8px;
+  background: #f9fafb; /* track */
+}
+
+.always-show-scrollbar::-webkit-scrollbar-thumb {
+  background: #e5e7eb; /* thumb */
+  border-radius: 4px;
+}
