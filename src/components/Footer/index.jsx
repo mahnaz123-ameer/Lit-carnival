@@ -1,6 +1,7 @@
 import React from 'react';
 import { BookOpen, Mail, MapPin, Calendar, Phone, Facebook, Twitter, Instagram } from 'lucide-react';
 
+
 const Footer = ({ setCurrentPage }) => {
   const quickLinks = [
     { id: 'home', label: 'Home' },
