@@ -32,7 +32,7 @@ const Home = ({ setCurrentPage }) => {
       <HeroSection setCurrentPage={setCurrentPage} mousePosition={mousePosition} />
       <StatsSection />
       <FeaturesSection />
-      <HighlightsSection />
+      {/* <HighlightsSection /> */}
       <QuickInfoSection />
       <FinalCTASection setCurrentPage={setCurrentPage} />
       <HomeStyles />

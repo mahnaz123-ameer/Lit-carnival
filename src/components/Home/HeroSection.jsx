@@ -65,12 +65,12 @@ const HeroSection = ({ setCurrentPage, mousePosition }) => {
 
       {/* Floating Animated Elements - Responsive positioning */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute top-20 sm:top-32 right-4 sm:right-20 opacity-20 sm:opacity-30 animate-float" style={{animationDelay: '2s'}}>
+        {/* <div className="absolute top-20 sm:top-32 right-4 sm:right-20 opacity-20 sm:opacity-30 animate-float" style={{animationDelay: '2s'}}>
           <CarnivalMask size="w-12 h-10 sm:w-24 sm:h-20" className="rotate-12" />
         </div>
         <div className="absolute top-20 sm:top-32 left-4 sm:left-20 opacity-20 sm:opacity-30 animate-float" style={{animationDelay: '2s'}}>
           <CarnivalMask size="w-12 h-10 sm:w-24 sm:h-20" className="rotate-12" />
-        </div>
+        </div> */}
         
         {/* Vintage Stars - Responsive sizes */}
         <div className="absolute top-1/4 left-1/4 w-4 h-4 sm:w-8 sm:h-8 text-amber-600 opacity-40 animate-ping" style={{animationDelay: '1s'}}>✦</div>
@@ -84,7 +84,7 @@ const HeroSection = ({ setCurrentPage, mousePosition }) => {
           <div className="mb-8 sm:mb-12 transform hover:scale-105 transition-all duration-700">
             <div className="relative">
               <h1 className="text-4xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl font-black mb-4 sm:mb-6 tracking-tighter leading-none">
-                <span className="bg-gradient-to-r from-amber-400 via-amber-600 to-red-600 bg-clip-text text-transparent drop-shadow-2xl">
+                <span className="bg-red-700 bg-clip-text text-transparent drop-shadow-2xl">
                   EWU LIT-CARNIVAL
                 </span>
               </h1>
@@ -113,8 +113,9 @@ const HeroSection = ({ setCurrentPage, mousePosition }) => {
           <div className="max-w-5xl mx-auto mb-10 sm:mb-16 px-2">
             <div className="bg-amber-50/95 backdrop-blur-xl p-6 sm:p-8 lg:p-10 rounded-xl shadow-2xl border-2 border-red-800/30">
               <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-red-900 leading-relaxed" style={{fontFamily: 'serif'}}>
-                The Department of English, <span className="font-bold text-red-800">East West University</span>, invites you to an extraordinary inter-university literary competition. 
-                Join us in a <span className="font-bold bg-gradient-to-r from-red-700 to-amber-700 bg-clip-text text-transparent">whirlwind of creativity, imagination, and artistic brilliance</span>—where literature comes alive through innovation.
+                The Department of English, <span className="font-bold text-red-800">East West University</span>, invites you to the EWU Lit-Carnival 2025: an inter-university literary competition rolling into our campus in a whirlwind of words, rhymes, and costumes.  
+                 University students from various disciplines across Bangladesh are encouraged to participate or attend; whether they are dreamers, performers, readers, artists, or poets, this is an opportunity for them to create, compose, and captivate.
+                {/* Join us in a <span className="font-bold bg-gradient-to-r from-red-700 to-amber-700 bg-clip-text text-transparent">whirlwind of creativity, imagination, and artistic brilliance</span>—where literature comes alive through innovation. */}
               </p>
             </div>
           </div>
