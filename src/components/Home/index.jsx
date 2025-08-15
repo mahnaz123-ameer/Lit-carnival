@@ -33,8 +33,8 @@ const Home = ({ setCurrentPage }) => {
       <StatsSection />
       <FeaturesSection />
       {/* <HighlightsSection /> */}
-      <QuickInfoSection />
-      <FinalCTASection setCurrentPage={setCurrentPage} />
+      <QuickInfoSection setCurrentPage={setCurrentPage} />
+      {/* <FinalCTASection setCurrentPage={setCurrentPage} /> */}
       <HomeStyles />
     </div>
   );

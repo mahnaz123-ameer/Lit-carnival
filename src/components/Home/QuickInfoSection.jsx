@@ -4,7 +4,7 @@ import CarnivalMask from './carnivalmask';
 
 const QuickInfoSection = () => {
   return (
-    <section className="py-16 sm:py-20 lg:py-24 bg-gradient-to-br from-amber-600 via-red-700 to-orange-600 text-white relative overflow-hidden">
+    <section className="py-16 sm:py-20 lg:py-24 bg-gradient-to-br from-amber-200 via-red-200 to-orange-200 text-black-200 relative overflow-hidden">
       <div className="absolute inset-0 opacity-5 sm:opacity-10">
         {/* Carnival masks - responsive positioning and sizing */}
         <div className="absolute top-8 sm:top-20 left-4 sm:left-20 animate-float">
@@ -23,19 +23,19 @@ const QuickInfoSection = () => {
           <div className="group bg-black/20 backdrop-blur-2xl p-6 sm:p-8 lg:p-12 rounded-2xl sm:rounded-3xl border border-white/20 hover:bg-black/30 hover:border-white/30 transition-all duration-500 transform hover:-translate-y-2 sm:hover:-translate-y-4">
             <MapPin className="w-8 h-8 sm:w-9 sm:h-9 lg:w-10 lg:h-10 mx-auto mb-6 sm:mb-8 text-yellow-300 group-hover:scale-110 group-hover:rotate-6 transition-all duration-300" />
             <h3 className="text-xl sm:text-2xl lg:text-3xl font-bold mb-4 sm:mb-6">Venue</h3>
-            <p className="text-yellow-100 text-base sm:text-lg lg:text-xl leading-relaxed">East West University<br />Dhaka, Bangladesh</p>
+            <p className="text-gray-100 text-base sm:text-lg lg:text-xl leading-relaxed">East West University<br />Dhaka, Bangladesh</p>
           </div>
           
           <div className="group bg-black/20 backdrop-blur-2xl p-6 sm:p-8 lg:p-12 rounded-2xl sm:rounded-3xl border border-white/20 hover:bg-black/30 hover:border-white/30 transition-all duration-500 transform hover:-translate-y-2 sm:hover:-translate-y-4">
             <Clock className="w-8 h-8 sm:w-9 sm:h-9 lg:w-10 lg:h-10 mx-auto mb-6 sm:mb-8 text-yellow-300 group-hover:scale-110 group-hover:rotate-6 transition-all duration-300" />
             <h3 className="text-xl sm:text-2xl lg:text-3xl font-bold mb-4 sm:mb-6">Registration Deadline</h3>
-            <p className="text-yellow-100 text-base sm:text-lg lg:text-xl leading-relaxed">August 20, 2025<br />Don't miss out!</p>
+            <p className="text-gray-100 text-base sm:text-lg lg:text-xl leading-relaxed">August 20, 2025<br />Don't miss out!</p>
           </div>
           
           <div className="group bg-black/20 backdrop-blur-2xl p-6 sm:p-8 lg:p-12 rounded-2xl sm:rounded-3xl border border-white/20 hover:bg-black/30 hover:border-white/30 transition-all duration-500 transform hover:-translate-y-2 sm:hover:-translate-y-4">
             <Trophy className="w-8 h-8 sm:w-9 sm:h-9 lg:w-10 lg:h-10 mx-auto mb-6 sm:mb-8 text-yellow-300 group-hover:scale-110 group-hover:rotate-6 transition-all duration-300" />
-            <h3 className="text-xl sm:text-2xl lg:text-3xl font-bold mb-4 sm:mb-6">Prizes & Recognition</h3>
-            <p className="text-yellow-100 text-base sm:text-lg lg:text-xl leading-relaxed">Certificates & Awards<br />for all participants</p>
+            <h3 className="text-xl sm:text-2xl lg:text-3xl font-bold mb-4 sm:mb-6">Recognition</h3>
+            <p className="text-gray-100 text-base sm:text-lg lg:text-xl leading-relaxed">Certificates <br />for all participants</p>
           </div>
         </div>
       </div>
