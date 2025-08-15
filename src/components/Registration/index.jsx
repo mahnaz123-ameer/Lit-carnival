@@ -3,6 +3,7 @@ import { Calendar, Clock, DollarSign, Mail, Phone, CheckCircle, AlertCircle, Ext
 
 const Registration = () => {
   const [selectedSegments, setSelectedSegments] = useState([]);
+  const [showVisitorMessage, setShowVisitorMessage] = useState(false);
 
   const segments = [
     { 
@@ -67,6 +68,15 @@ const Registration = () => {
     }, 0);
   };
 
+  const handleParticipantRegistration = () => {
+    window.open('https://forms.gle/R3XYTma4TvBQ6XaX7', '_blank');
+  };
+
+  const handleVisitorRegistration = () => {
+    setShowVisitorMessage(true);
+    setTimeout(() => setShowVisitorMessage(false), 3000);
+  };
+
   const handleRegistrationClick = () => {
     if (selectedSegments.length === 0) {
       alert('Please select at least one segment before proceeding to registration.');
@@ -110,22 +120,33 @@ const Registration = () => {
 
       <div className="container mx-auto px-4 sm:px-6 py-6 sm:py-8">
         
-        {/* Important Dates - Mobile Responsive */}
+        {/* Registration Options - Mobile Responsive */}
         <div className="bg-gradient-to-r from-red-700 via-red-600 to-amber-600 text-white rounded-xl sm:rounded-2xl p-6 sm:p-8 mb-6 sm:mb-8 shadow-xl border-2 border-red-800">
-          <div className="flex items-center justify-center mb-4 sm:mb-6">
-            <AlertCircle className="w-5 h-5 sm:w-6 sm:h-6 mr-2" />
-            <h2 className="text-2xl sm:text-3xl font-bold">Important Dates</h2>
-          </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6 text-center">
-            <div className="bg-white bg-opacity-20 rounded-lg p-4 sm:p-6 backdrop-blur-sm border border-amber-200">
+            <div 
+              className="bg-white bg-opacity-20 rounded-lg p-4 sm:p-6 backdrop-blur-sm border border-amber-200 cursor-pointer hover:bg-opacity-30 transition-all duration-300 transform hover:scale-105"
+              onClick={handleParticipantRegistration}
+            >
               <Calendar className="w-8 h-8 sm:w-10 sm:h-10 mx-auto mb-2 sm:mb-3 text-yellow-300" />
-              <div className="font-bold text-base sm:text-lg mb-1">Registration Deadline</div>
-              <div className="text-xl sm:text-2xl font-bold text-yellow-200">August 20, 2025</div>
+              <div className="font-bold text-base sm:text-lg mb-1">Participant Registration</div>
+              <p className="text-sm text-orange-100">Register to compete in the events</p>
             </div>
-            <div className="bg-white bg-opacity-20 rounded-lg p-4 sm:p-6 backdrop-blur-sm border border-amber-200">
+            <div 
+              className="bg-white bg-opacity-20 rounded-lg p-4 sm:p-6 backdrop-blur-sm border border-amber-200 cursor-pointer hover:bg-opacity-30 transition-all duration-300 transform hover:scale-105 relative"
+              onClick={handleVisitorRegistration}
+            >
               <Clock className="w-8 h-8 sm:w-10 sm:h-10 mx-auto mb-2 sm:mb-3 text-yellow-300" />
-              <div className="font-bold text-base sm:text-lg mb-1">Event Date</div>
-              <div className="text-xl sm:text-2xl font-bold text-yellow-200">October 16, 2025</div>
+              <div className="font-bold text-base sm:text-lg mb-1">Visitor Registration</div>
+              <p className="text-sm text-orange-100">Register to attend as spectator</p>
+              
+              {showVisitorMessage && (
+                <div className="absolute inset-0 bg-amber-600 bg-opacity-95 rounded-lg flex items-center justify-center backdrop-blur-sm">
+                  <div className="text-center p-2">
+                    <AlertCircle className="w-6 h-6 mx-auto mb-2 text-white" />
+                    <p className="font-semibold text-white text-sm">Will be available soon</p>
+                  </div>
+                </div>
+              )}
             </div>
           </div>
         </div>
@@ -168,7 +189,7 @@ const Registration = () => {
                       <span className="px-2 py-1 bg-blue-600 text-white text-xs rounded-full">TEAM</span>
                     )}
                     {segment.id === 'poster' && (
-                      <span className="px-2 py-1 bg-green-600 text-white text-xs rounded-full">PAIRS OK</span>
+                      <span className="px-2 py-1 bg-green-600 text-white text-xs rounded-full">INDIVIDUAL/PAIR</span>
                     )}
                     {segment.id === 'masquerade' && (
                       <span className="px-2 py-1 bg-purple-600 text-white text-xs rounded-full">SPECIAL</span>
@@ -233,86 +254,36 @@ const Registration = () => {
           </div>
         </div>
 
-        {/* Contact Information - Mobile Responsive Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-4 sm:gap-6">
-          {/* Registration Rules */}
-          <div className="bg-gradient-to-br from-amber-50 to-orange-50 rounded-lg sm:rounded-xl shadow-lg p-4 sm:p-6 border-2 border-amber-300">
-            <h3 className="text-lg sm:text-xl font-bold text-amber-900 mb-3 sm:mb-4">Registration Rules</h3>
-            <div className="space-y-2 sm:space-y-3 text-xs sm:text-sm">
-              <div className="bg-white bg-opacity-80 p-2 sm:p-3 rounded-lg border border-amber-200">
-                <strong className="text-amber-900">Fees:</strong>
-                <div className="text-amber-800">Drama: ৳1,020 | Others: ৳205 each</div>
-              </div>
-              <div className="bg-white bg-opacity-80 p-2 sm:p-3 rounded-lg border border-amber-200">
-                <strong className="text-amber-900">Payment:</strong>
-                <div className="text-amber-800">Separate payment required for each segment</div>
-              </div>
-              <div className="bg-white bg-opacity-80 p-2 sm:p-3 rounded-lg border border-amber-200">
-                <strong className="text-amber-900">Processing:</strong>
-                <div className="text-amber-800">All fees include bKash transaction charges</div>
-              </div>
+        {/* Important Notes - Mobile Responsive */}
+        <div className="mt-12 sm:mt-16 bg-gradient-to-br from-amber-50 to-orange-50 rounded-xl sm:rounded-2xl p-6 sm:p-8 shadow-xl border-2 border-amber-200">
+          <h2 className="text-xl sm:text-2xl font-bold text-amber-900 mb-4 sm:mb-6 text-center">Important Guidelines</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
+            <div>
+              <h3 className="text-base sm:text-lg font-semibold text-amber-900 mb-2 sm:mb-3">General Rules:</h3>
+              <ul className="space-y-2 text-amber-800 text-sm sm:text-base">
+                <li>• Multiple segment participation is allowed.</li>
+                <li>• Participants must make a separate payment for each registration.</li>
+                <li>• Posters should be hand-made; however, printed or decorative elements may be added.</li>
+                <li>• Cosplay and Comic-Con participants must wear costumes that are appropriate to the event’s standards.</li>
+                 <li>• The final segment, Masquerade, is not competitive but requires prior registration.</li>
+                  <li>• Spot registration will not be available for participants but will be open for visitors only.</li>
+              </ul>
             </div>
-          </div>
-
-          {/* Contact Info */}
-          <div className="bg-gradient-to-br from-amber-50 to-orange-50 rounded-lg sm:rounded-xl shadow-lg p-4 sm:p-6 border-2 border-amber-300">
-            <h3 className="text-lg sm:text-xl font-bold text-amber-900 mb-3 sm:mb-4">Contact Information</h3>
-            <div className="space-y-3 sm:space-y-4">
-              <div className="flex items-center bg-white bg-opacity-80 p-2 sm:p-3 rounded-lg border border-amber-200">
-                <Mail className="w-5 h-5 sm:w-6 sm:h-6 mr-2 sm:mr-3 text-red-700 flex-shrink-0" />
-                <div>
-                  <div className="font-semibold text-amber-900 text-sm sm:text-base">Email</div>
-                  <div className="text-xs sm:text-sm text-amber-700">lit-carnival@ewubd.edu</div>
-                </div>
-              </div>
-              <div className="flex items-center bg-white bg-opacity-80 p-2 sm:p-3 rounded-lg border border-amber-200">
-                <Phone className="w-5 h-5 sm:w-6 sm:h-6 mr-2 sm:mr-3 text-red-700 flex-shrink-0" />
-                <div>
-                  <div className="font-semibold text-amber-900 text-sm sm:text-base">Support</div>
-                  <div className="text-xs sm:text-sm text-amber-700">Available during office hours</div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          {/* Event Details */}
-          <div className="bg-gradient-to-br from-amber-50 to-orange-50 rounded-lg sm:rounded-xl shadow-lg p-4 sm:p-6 border-2 border-amber-300">
-            <h3 className="text-lg sm:text-xl font-bold text-amber-900 mb-3 sm:mb-4">Event Details</h3>
-            <div className="space-y-2 sm:space-y-3 text-xs sm:text-sm">
-              <div className="bg-white bg-opacity-80 p-2 sm:p-3 rounded-lg border border-amber-200">
-                <strong className="text-amber-900">Venue:</strong>
-                <div className="text-amber-800">East West University Campus</div>
-              </div>
-              <div className="bg-white bg-opacity-80 p-2 sm:p-3 rounded-lg border border-amber-200">
-                <strong className="text-amber-900">Duration:</strong>
-                <div className="text-amber-800">Full Day Event</div>
-              </div>
-              <div className="bg-white bg-opacity-80 p-2 sm:p-3 rounded-lg border border-amber-200">
-                <strong className="text-amber-900">Audience:</strong>
-                <div className="text-amber-800">University Students Nationwide</div>
-              </div>
-            </div>
-          </div>
-
-          {/* Prizes */}
-          <div className="bg-gradient-to-br from-amber-50 to-orange-50 rounded-lg sm:rounded-xl shadow-lg p-4 sm:p-6 border-2 border-amber-300">
-            <h3 className="text-lg sm:text-xl font-bold text-amber-900 mb-3 sm:mb-4">Prizes & Recognition</h3>
-            <div className="space-y-2 sm:space-y-3 text-xs sm:text-sm">
-              <div className="bg-white bg-opacity-80 p-2 sm:p-3 rounded-lg border border-amber-200">
-                <strong className="text-amber-900">Winners:</strong>
-                <div className="text-amber-800">Cash prizes & certificates</div>
-              </div>
-              <div className="bg-white bg-opacity-80 p-2 sm:p-3 rounded-lg border border-amber-200">
-                <strong className="text-amber-900">Recognition:</strong>
-                <div className="text-amber-800">University-wide acclaim</div>
-              </div>
-              <div className="bg-white bg-opacity-80 p-2 sm:p-3 rounded-lg border border-amber-200">
-                <strong className="text-amber-900">Networking:</strong>
-                <div className="text-amber-800">Connect with literary enthusiasts</div>
-              </div>
+            <div>
+              <h3 className="text-base sm:text-lg font-semibold text-amber-900 mb-2 sm:mb-3">Registration:</h3>
+              <ul className="space-y-2 text-amber-800 text-sm sm:text-base">
+                <li>• Drama: Tk. 1000 per team</li>
+                <li>• Other segments: Tk. 200 per entry</li>
+                <li>• Early registration is recommended.</li>
+                <li>• Spots are limited for each segment.</li>
+                <li>• Registration fees are non-refundable.</li>
+              </ul>
             </div>
           </div>
         </div>
+
+        {/* Contact Information - Mobile Responsive Grid */}
+       
       </div>
     </div>
   );

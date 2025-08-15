@@ -87,15 +87,15 @@ const Header = () => {
               <div className="flex flex-col justify-center">
                 <div className="block group cursor-pointer" onClick={() => handleNavClick('/')}>
                   <h1 className="text-lg md:text-lg font-bold bg-gradient-to-r from-red-700 to-red-600 bg-clip-text text-transparent leading-tight group-hover:from-red-600 group-hover:to-red-500 transition-all duration-300">
-                    EWU LIT-CARNIVAL
+                    EWU LIT-CARNIVAL 2025
                   </h1>
-                  <div className="flex items-center space-x-2 mt-0.5">
-                    {/* <CarnivalMask size="w-5 h-4" className="transform group-hover:scale-110 transition-transform duration-300" /> */}
+                  {/* <div className="flex items-center space-x-2 mt-0.5">
+                    <CarnivalMask size="w-5 h-4" className="transform group-hover:scale-110 transition-transform duration-300" />
                     <p className="text-sm text-red-600 font-medium">
                       2025
                     </p>
                     <div className="w-4 h-0.5 bg-gradient-to-r from-amber-500 to-red-500 rounded-full"></div>
-                  </div>
+                  </div> */}
                 </div>
               </div>
             </div>

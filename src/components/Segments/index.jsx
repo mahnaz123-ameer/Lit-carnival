@@ -8,7 +8,7 @@ const Segments = () => {
       icon: <Theater className="w-6 h-6 sm:w-7 sm:h-7 lg:w-8 lg:h-8" />,
       title: 'Drama',
       timeLimit: '15 minutes',
-      maxMembers: '10 members/team',
+      maxMembers: 'Max 10 members/team',
       color: 'from-red-700 to-red-800',
       bgColor: 'from-red-100 via-amber-50 to-yellow-100',
       themes: [
@@ -22,7 +22,7 @@ const Segments = () => {
       icon: <Presentation className="w-6 h-6 sm:w-7 sm:h-7 lg:w-8 lg:h-8" />,
       title: 'Poster Presentation',
       timeLimit: 'Display format',
-      maxMembers: 'Individual or team',
+      maxMembers: 'Individual or Pair 28✕22 inches',
       color: 'from-amber-600 to-orange-700',
       bgColor: 'from-amber-100 via-orange-50 to-red-100',
       themes: [
@@ -48,7 +48,7 @@ const Segments = () => {
       icon: <Palette className="w-6 h-6 sm:w-7 sm:h-7 lg:w-8 lg:h-8" />,
       title: 'Comic-Con & Cosplay',
       timeLimit: 'Performance based',
-      maxMembers: 'Individual or group',
+      maxMembers: 'Individual',
       color: 'from-orange-600 to-red-700',
       bgColor: 'from-orange-100 via-red-50 to-amber-100',
       themes: [
@@ -57,6 +57,7 @@ const Segments = () => {
         'Apocalypse and Dystopias',
         'Fan-Favorite Romances',
         'Time Travelers from Pop Culture',
+        '---divider---',
         'Witches, Wizards & Warlocks',
         'Pantheon Clash: Gods from Different Mythologies',
         'The Victorian Gothic',
@@ -69,7 +70,7 @@ const Segments = () => {
       icon: <Sparkles className="w-6 h-6 sm:w-7 sm:h-7 lg:w-8 lg:h-8" />,
       title: 'Masquerade',
       timeLimit: 'Evening event',
-      maxMembers: 'All participants',
+      maxMembers: 'Registered participants',
       color: 'from-red-600 to-amber-700',
       bgColor: 'from-red-100 via-amber-50 to-yellow-100',
       themes: [
@@ -158,9 +159,13 @@ const Segments = () => {
                     </h3>
                     <div className="grid gap-2 sm:gap-3">
                       {segment.themes.map((theme, themeIndex) => (
-                        <div key={themeIndex} className="bg-amber-50 bg-opacity-90 p-3 sm:p-4 rounded-lg shadow-sm border border-amber-200 hover:shadow-md hover:bg-amber-100 transition-all">
-                          <p className="text-amber-900 font-medium text-sm sm:text-base">{theme}</p>
-                        </div>
+                        theme === '---divider---' ? (
+                          <div key={themeIndex} className="border-t-2 border-amber-300 my-2 sm:my-3"></div>
+                        ) : (
+                          <div key={themeIndex} className="bg-amber-50 bg-opacity-90 p-3 sm:p-4 rounded-lg shadow-sm border border-amber-200 hover:shadow-md hover:bg-amber-100 transition-all">
+                            <p className="text-amber-900 font-medium text-sm sm:text-base">{theme}</p>
+                          </div>
+                        )
                       ))}
                     </div>
                   </div>
@@ -191,39 +196,19 @@ const Segments = () => {
           ))}
         </div>
 
-        {/* Important Notes - Mobile Responsive */}
-        <div className="mt-12 sm:mt-16 bg-gradient-to-br from-amber-50 to-orange-50 rounded-xl sm:rounded-2xl p-6 sm:p-8 shadow-xl border-2 border-amber-200">
-          <h2 className="text-xl sm:text-2xl font-bold text-amber-900 mb-4 sm:mb-6 text-center">Important Guidelines</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
-            <div>
-              <h3 className="text-base sm:text-lg font-semibold text-amber-900 mb-2 sm:mb-3">General Rules:</h3>
-              <ul className="space-y-2 text-amber-800 text-sm sm:text-base">
-                <li>• All university students from across Bangladesh are welcome</li>
-                <li>• Multiple segment participation is allowed</li>
-                <li>• Original and creative interpretations are highly encouraged</li>
-                <li>• Costumes and props are welcome for all segments</li>
-              </ul>
-            </div>
-            <div>
-              <h3 className="text-base sm:text-lg font-semibold text-amber-900 mb-2 sm:mb-3">Registration:</h3>
-              <ul className="space-y-2 text-amber-800 text-sm sm:text-base">
-                <li>• Drama Team: Tk. 1000 per team</li>
-                <li>• Other Segments: Tk. 200 per entry</li>
-                <li>• Early registration recommended</li>
-                <li>• Spots are limited for each segment</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-
         {/* CTA Section - Mobile Responsive */}
         <div className="mt-8 sm:mt-12 text-center">
           <div className="bg-gradient-to-r from-red-700 via-red-600 to-amber-600 text-white p-6 sm:p-8 rounded-xl sm:rounded-2xl shadow-xl border-2 border-red-800">
             <h2 className="text-xl sm:text-2xl font-bold mb-3 sm:mb-4">Ready to Participate?</h2>
             <p className="text-base sm:text-lg mb-4 sm:mb-6 px-2">Choose your segment and register now to secure your spot!</p>
-            <button className="bg-amber-100 text-red-800 px-6 sm:px-8 py-2 sm:py-3 rounded-lg font-semibold hover:bg-amber-200 transition-colors shadow-lg border-2 border-amber-300 w-full sm:w-auto text-sm sm:text-base">
+            <a 
+              href="https://docs.google.com/forms/d/e/1FAIpQLSf4sJdLVQJauODYGswSu4mlMRJ28mmHoVq9pL_38epN_AGwuA/viewform?usp=send_form"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-block bg-amber-100 text-red-800 px-6 sm:px-8 py-2 sm:py-3 rounded-lg font-semibold hover:bg-amber-200 transition-colors shadow-lg border-2 border-amber-300 w-full sm:w-auto text-sm sm:text-base text-center"
+            >
               Register Now
-            </button>
+            </a>
           </div>
         </div>
       </div>

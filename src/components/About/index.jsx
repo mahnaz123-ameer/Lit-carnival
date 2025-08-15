@@ -2,22 +2,23 @@ import React from 'react';
 import { Sparkles, Calendar, Users, Award, BookOpen, Palette, Theater, Mic } from 'lucide-react';
 import israt from "../../assets/israt.png";
 import shahnaz from "../../assets/shahnaz.png";
+import chair from "../../assets/chair.png";
 
 const AboutUs = () => {
   const conveners = [
     {
-      name: "Israt Jahan (Shanti)",
+      name: "Israt Jahan",
       designation: "Assistant Professor",
       department: "Department of English, East West University", 
       expertise: ["Film Studies", "Postcolonial Literature", "Critical Theory", "Latin American Literature"],
-      image: israt // Placeholder for image
+      image: israt
     },
     {
       name: "Shahnaz Ameer",
       designation: "Senior Lecturer",
       department: "Department of English, East West University",
       expertise: ["Women & Gender Studies", "Psychoanalytic Criticism", "Cultural Studies", "Creative Writing"],
-      image: shahnaz // Placeholder for image
+      image: shahnaz
     },
   ];
 
@@ -85,15 +86,20 @@ const AboutUs = () => {
         <div className="text-center mb-12 sm:mb-16">
           <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-amber-900 mb-4 sm:mb-6">The Literary Celebration</h2>
           <div className="max-w-4xl mx-auto bg-gradient-to-br from-amber-50 to-orange-50 rounded-xl sm:rounded-2xl p-6 sm:p-8 shadow-xl border-2 border-amber-300">
-            <p className="text-base sm:text-lg text-amber-800 leading-relaxed mb-4 sm:mb-6">
-              The Department of English, East West University, invites you to the EWU Lit-Carnival 2025: an inter-university literary competition rolling into our campus in a whirlwind of words, rhymes, and costumes. The Carnival aims to bring literature to life and make us imagine the classics anew.
+             <p className="text-2xl sm:text-lg text-amber-800 leading-relaxed mb-2 sm:mb-6 text-left">
+             <strong> Overview</strong>
             </p>
-            <p className="text-base sm:text-lg text-amber-800 leading-relaxed mb-4 sm:mb-6">
-              University students from various disciplines across Bangladesh are encouraged to participate or attend; whether they are dreamers, performers, readers, artists, or poets, this is an opportunity for them to create, compose, and captivate.
+            <p className="text-base sm:text-lg text-amber-800 leading-relaxed mb-4 sm:mb-6 text-left -mt-5">
+              The Department of English, East West University, invites you to the EWU Lit-Carnival 2025: an inter-university literary competition rolling into our
+               campus in a whirlwind of words, rhymes, and costumes. The Carnival aims to bring literature to life and make us imagine the classics anew.
+                University students from various disciplines across Bangladesh are encouraged to participate or attend; whether they are dreamers, performers,
+                 readers, artists, or poets, this is an opportunity for them to create, compose, and captivate. The university premises will come alive with the 
+                 festive spirit of the carnival, featuring themed stalls, visual installations, and interactive spaces that invite visitors to engage with arts
+                  and culture in myriad ways. Inspired by Mikhail Bakhtin's idea of the carnivalesque—a joyful, rule-breaking space, where hierarchies dissolve 
+                  and creativity reigns—the carnival aims to celebrate literature in joyous ways and make participants reimagine the classics while spotlighting 
+                  the creativity of our young ones. It will feature various exciting inter-university events in which you can compete to showcase your skills in the creative arts.
             </p>
-            <p className="text-base sm:text-lg text-amber-800 leading-relaxed">
-              Inspired by Mikhail Bakhtin's idea of the carnivalesque—a joyful, rule-breaking space, where hierarchies dissolve and creativity reigns—the carnival aims to celebrate literature in joyous ways and make participants reimagine the classics while spotlighting the creativity of our young ones.
-            </p>
+          
           </div>
         </div>
 
@@ -104,16 +110,24 @@ const AboutUs = () => {
             {conveners.map((convener, index) => (
               <div key={index} className="bg-gradient-to-br from-amber-50 to-orange-50 rounded-xl sm:rounded-2xl p-6 sm:p-8 shadow-xl border-2 border-amber-300 hover:shadow-2xl transition-all duration-300">
                 <div className="text-center mb-6">
-                  <div className="w-24 h-24 sm:w-32 sm:h-32 mx-auto mb-4 relative">
+                  <div className="mx-auto mb-4 relative">
                     {convener.image ? (
-                      <img 
-                        src={convener.image} 
-                        alt={convener.name}
-                        className="w-24 h-24 sm:w-32 sm:h-32 rounded-full object-cover border-4 border-amber-300 shadow-lg"
-                      />
+                      <div className="w-40 h-40 sm:w-48 sm:h-48 mx-auto">
+                        <img 
+                          src={convener.image} 
+                          alt={convener.name}
+                          className="w-40 h-40 sm:w-48 sm:h-48 rounded-full object-cover object-top border-4 border-amber-300 shadow-lg"
+                          style={{
+                            minWidth: '160px',
+                            minHeight: '160px',
+                            maxWidth: '192px',
+                            maxHeight: '192px'
+                          }}
+                        />
+                      </div>
                     ) : (
-                      <div className="w-24 h-24 sm:w-32 sm:h-32 bg-gradient-to-br from-red-200 to-amber-200 rounded-full flex items-center justify-center border-4 border-amber-300">
-                        <Users className="w-12 h-12 sm:w-16 sm:h-16 text-amber-700" />
+                      <div className="w-40 h-40 sm:w-48 sm:h-48 bg-gradient-to-br from-red-200 to-amber-200 rounded-full flex items-center justify-center border-4 border-amber-300 mx-auto">
+                        <Users className="w-20 h-20 sm:w-24 sm:h-24 text-amber-700" />
                       </div>
                     )}
                   </div>
@@ -140,57 +154,39 @@ const AboutUs = () => {
           </div>
         </div>
 
-        {/* Carnival Highlights */}
+        {/* Message from the Chairperson */}
         <div className="mb-12 sm:mb-16">
-          <h3 className="text-2xl sm:text-3xl font-bold text-amber-900 text-center mb-8 sm:mb-10">Carnival Highlights</h3>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 lg:gap-8">
-            {carnivalHighlights.map((highlight, index) => (
-              <div key={index} className="bg-gradient-to-br from-white to-amber-50 rounded-lg sm:rounded-xl p-4 sm:p-6 shadow-lg border-2 border-amber-200 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
-                <div className={`w-12 h-12 sm:w-16 sm:h-16 bg-gradient-to-br ${highlight.color} text-white rounded-lg sm:rounded-xl flex items-center justify-center mb-3 sm:mb-4 mx-auto`}>
-                  {highlight.icon}
+          <h3 className="text-2xl sm:text-3xl font-bold text-amber-900 text-center mb-8 sm:mb-10">Message from the Chairperson</h3>
+          <div className="max-w-4xl mx-auto bg-gradient-to-br from-amber-50 to-orange-50 rounded-xl sm:rounded-2xl p-6 sm:p-8 shadow-xl border-2 border-amber-300">
+            <div className="text-center mb-6">
+              <div className="mx-auto mb-4 relative">
+                <div className="w-32 h-32 sm:w-40 sm:h-40 mx-auto">
+                  <img 
+                    src={chair} 
+                    alt="Akhter Jahan, PhD"
+                    className="w-32 h-32 sm:w-40 sm:h-40 rounded-full object-cover object-top border-4 border-amber-300 shadow-lg"
+                    style={{
+                      minWidth: '128px',
+                      minHeight: '128px',
+                      maxWidth: '160px',
+                      maxHeight: '160px'
+                    }}
+                  />
                 </div>
-                <h4 className="text-lg sm:text-xl font-bold text-amber-900 text-center mb-2 sm:mb-3 leading-tight">{highlight.title}</h4>
-                <p className="text-sm sm:text-base text-amber-700 text-center leading-relaxed">{highlight.description}</p>
               </div>
-            ))}
-          </div>
-        </div>
-
-        {/* Event Stats */}
-        <div className="bg-gradient-to-r from-red-700 via-red-600 to-amber-600 text-white rounded-xl sm:rounded-2xl p-6 sm:p-8 shadow-xl border-2 border-red-800 mb-12 sm:mb-16">
-          <h3 className="text-2xl sm:text-3xl font-bold text-center mb-6 sm:mb-8">Event at a Glance</h3>
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 text-center">
-            <div className="bg-white bg-opacity-20 rounded-lg p-4 sm:p-6 backdrop-blur-sm">
-              <Award className="w-8 h-8 sm:w-10 sm:h-10 lg:w-12 lg:h-12 mx-auto mb-2 sm:mb-3 text-yellow-300" />
-              <div className="text-xl sm:text-2xl font-bold mb-1">5</div>
-              <div className="text-xs sm:text-sm lg:text-base text-orange-100 leading-tight">Competition Segments</div>
             </div>
-            <div className="bg-white bg-opacity-20 rounded-lg p-4 sm:p-6 backdrop-blur-sm">
-              <Users className="w-8 h-8 sm:w-10 sm:h-10 lg:w-12 lg:h-12 mx-auto mb-2 sm:mb-3 text-yellow-300" />
-              <div className="text-xl sm:text-2xl font-bold mb-1">500+</div>
-              <div className="text-xs sm:text-sm lg:text-base text-orange-100 leading-tight">Expected Participants</div>
-            </div>
-            <div className="bg-white bg-opacity-20 rounded-lg p-4 sm:p-6 backdrop-blur-sm">
-              <BookOpen className="w-8 h-8 sm:w-10 sm:h-10 lg:w-12 lg:h-12 mx-auto mb-2 sm:mb-3 text-yellow-300" />
-              <div className="text-xl sm:text-2xl font-bold mb-1">All</div>
-              <div className="text-xs sm:text-sm lg:text-base text-orange-100 leading-tight">Universities Welcome</div>
-            </div>
-            <div className="bg-white bg-opacity-20 rounded-lg p-4 sm:p-6 backdrop-blur-sm">
-              <Calendar className="w-8 h-8 sm:w-10 sm:h-10 lg:w-12 lg:h-12 mx-auto mb-2 sm:mb-3 text-yellow-300" />
-              <div className="text-xl sm:text-2xl font-bold mb-1">1</div>
-              <div className="text-xs sm:text-sm lg:text-base text-orange-100 leading-tight">Day Full Event</div>
-            </div>
-          </div>
-        </div>
-
-        {/* Special Masquerade Section */}
-        <div className="mt-12 sm:mt-16 text-center">
-          <div className="bg-gradient-to-br from-purple-100 to-pink-100 rounded-xl sm:rounded-2xl p-6 sm:p-8 shadow-xl border-2 border-purple-300">
-            <Sparkles className="w-12 h-12 sm:w-16 sm:h-16 mx-auto mb-3 sm:mb-4 text-purple-700" />
-            <h3 className="text-2xl sm:text-3xl font-bold text-purple-900 mb-3 sm:mb-4">Evening Masquerade</h3>
-            <p className="text-base sm:text-lg text-purple-800 max-w-2xl mx-auto leading-relaxed">
-              Cap off the literary celebration with an elegant masquerade ball! Don your finest gown and suit, wear a mysterious mask, and dance the evening away in true carnival spirit.
+            
+            <p className="text-base sm:text-lg text-amber-800 leading-relaxed mb-6 text-left">
+              It is with great pleasure that I welcome you to the Lit-Carnival 2025. This event offers a unique opportunity for participants and attendees alike to engage deeply with the world of literature and the arts. Your involvement, whether through performance, creation, or attendance, is what makes this celebration meaningful and memorable. I hope you find inspiration and enjoyment throughout the festivities.
             </p>
+            
+            <div className="text-right">
+              <p className="text-base sm:text-lg font-semibold text-amber-900 mb-1">Warm Regards</p>
+              <p className="text-lg sm:text-xl font-bold text-red-700 mb-1">Akhter Jahan, PhD</p>
+              <p className="text-sm sm:text-base text-amber-700 leading-relaxed">Chairperson and Associate Professor</p>
+              <p className="text-sm sm:text-base text-amber-700">Department of English</p>
+              <p className="text-sm sm:text-base text-amber-700">East West University</p>
+            </div>
           </div>
         </div>
       </div>
