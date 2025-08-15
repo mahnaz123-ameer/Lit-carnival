@@ -1,13 +1,15 @@
 import React from 'react';
-import { BookOpen, Mail, MapPin, Calendar, Phone, Facebook, Twitter, Instagram } from 'lucide-react';
+import { Link } from 'react-router-dom';
+import { BookOpen, Mail, MapPin, Calendar, Phone, Facebook } from 'lucide-react';
 
-const Footer = ({ setCurrentPage }) => {
+const Footer = () => {
   const quickLinks = [
-    { id: 'home', label: 'Home' },
-    { id: 'segments', label: 'Segments' },
-    { id: 'registration', label: 'Registration' },
-    { id: 'about', label: 'About Us' },
-    { id: 'contact', label: 'Contact' }
+    { path: '/', label: 'Home' },
+    { path: '/segments', label: 'Segments' },
+    { path: '/registration', label: 'Registration' },
+    { path: '/about', label: 'About Us' },
+    { path: '/sponsers', label: 'Sponsers' },
+    { path: '/contact', label: 'Contact' }
   ];
 
   return (
@@ -40,20 +42,7 @@ const Footer = ({ setCurrentPage }) => {
               >
                 <Facebook className="w-3 h-3 sm:w-4 sm:h-4" />
               </a>
-              <a 
-                href="#" 
-                className="w-7 h-7 sm:w-8 sm:h-8 bg-blue-400 rounded-full flex items-center justify-center hover:bg-blue-500 transition-all duration-300 hover:scale-110 shadow-md"
-                aria-label="Twitter"
-              >
-                <Twitter className="w-3 h-3 sm:w-4 sm:h-4" />
-              </a>
-              <a 
-                href="#" 
-                className="w-7 h-7 sm:w-8 sm:h-8 bg-pink-600 rounded-full flex items-center justify-center hover:bg-pink-700 transition-all duration-300 hover:scale-110 shadow-md"
-                aria-label="Instagram"
-              >
-                <Instagram className="w-3 h-3 sm:w-4 sm:h-4" />
-              </a>
+              
             </div>
           </div>
           
@@ -62,13 +51,13 @@ const Footer = ({ setCurrentPage }) => {
             <h4 className="font-semibold mb-2 sm:mb-3 text-sm sm:text-base text-yellow-200">Quick Links</h4>
             <ul className="space-y-1 sm:space-y-2">
               {quickLinks.map(link => (
-                <li key={link.id}>
-                  <button 
-                    onClick={() => setCurrentPage(link.id)}
+                <li key={link.path}>
+                  <Link 
+                    to={link.path}
                     className="text-white hover:text-yellow-200 transition-colors duration-300 text-xs sm:text-sm md:text-base block w-full text-center lg:text-left py-1 hover:underline hover:translate-x-1 transform transition-transform"
                   >
                     {link.label}
-                  </button>
+                  </Link>
                 </li>
               ))}
             </ul>
@@ -105,7 +94,7 @@ const Footer = ({ setCurrentPage }) => {
                 <Phone className="w-3 h-3 sm:w-4 sm:h-4 mt-0.5 text-blue-300 flex-shrink-0" />
                 <div className="text-center lg:text-left">
                   <p className="text-xs sm:text-sm text-yellow-100 font-medium">Phone</p>
-                  <p className="text-xs sm:text-sm text-white">+880-1234-567890</p>
+                  <p className="text-xs sm:text-sm text-white">09666775577 Ext: 316</p>
                 </div>
               </div>
             </div>
