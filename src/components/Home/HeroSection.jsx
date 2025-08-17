@@ -84,18 +84,18 @@ const HeroSection = ({ setCurrentPage, mousePosition, navigate }) => {
   };
 
   const CountdownCard = ({ value, label }) => (
-    <div className="bg-amber-50/95 backdrop-blur-xl px-2 py-2 sm:px-3 sm:py-3 md:px-2 md:py-2 lg:px-3 lg:py-2 rounded-md sm:rounded-lg border-2 border-red-900/60 shadow-lg transform hover:scale-105 transition-all duration-300 flex-1 min-w-0 hover:bg-amber-100/95">
-      <div className="text-lg sm:text-xl md:text-base lg:text-lg xl:text-xl font-black text-red-900 mb-1 leading-none text-center" style={{fontFamily: 'serif'}}>
+    <div className="bg-amber-50/95 backdrop-blur-xl px-0.5 py-1 sm:px-3 sm:py-3 md:px-2 md:py-2 lg:px-3 lg:py-2 rounded sm:rounded-lg border border-red-900/60 sm:border-2 shadow-lg transform hover:scale-105 transition-all duration-300 flex-1 min-w-0 hover:bg-amber-100/95">
+      <div className="text-xs sm:text-xl md:text-base lg:text-lg xl:text-xl font-black text-red-900 mb-0 sm:mb-1 leading-tight text-center" style={{fontFamily: 'serif'}}>
         {String(value).padStart(2, '0')}
       </div>
-      <div className="text-[8px] sm:text-[9px] md:text-[7px] lg:text-[8px] xl:text-[9px] font-bold text-red-700 uppercase tracking-tighter leading-none text-center" style={{fontFamily: 'serif'}}>
+      <div className="text-[6px] sm:text-[9px] md:text-[7px] lg:text-[8px] xl:text-[9px] font-bold text-red-700 uppercase tracking-tight leading-none text-center" style={{fontFamily: 'serif'}}>
         {label}
       </div>
     </div>
   );
 
   return (
-    <div className="relative min-h-screen lg:h-[1600px] flex flex-col overflow-hidden" style={{backgroundColor: '#F5E6D3'}}>
+    <div className="relative min-h-screen lg:h-[1300px] flex flex-col overflow-hidden" style={{backgroundColor: '#F5E6D3'}}>
       {/* Background with Image Carousel and Vintage Overlay */}
       <div className="absolute inset-0">
         {images.map((image, index) => (
@@ -184,16 +184,16 @@ const HeroSection = ({ setCurrentPage, mousePosition, navigate }) => {
               </h3>
             </div>
             
-            <div className="w-full px-4 sm:px-6 md:px-6 lg:px-8">
-              <div className="max-w-sm sm:max-w-lg md:max-w-lg lg:max-w-2xl xl:max-w-3xl mx-auto">
-                <div className="grid grid-cols-7 gap-1 sm:gap-2 md:gap-2 lg:gap-4 items-center">
+            <div className="w-full px-1 sm:px-6 md:px-6 lg:px-8">
+              <div className="max-w-[280px] sm:max-w-lg md:max-w-lg lg:max-w-2xl xl:max-w-3xl mx-auto">
+                <div className="grid grid-cols-7 gap-0.5 sm:gap-2 md:gap-2 lg:gap-4 items-center">
                   <CountdownCard value={timeLeft.days} label="DAYS" />
-                  <div className="text-center text-lg sm:text-xs md:text-base lg:text-xl xl:text-2xl font-black text-red-900">:</div>
+                  <div className="text-center text-xs sm:text-xl md:text-base lg:text-xl xl:text-2xl font-black text-red-900 px-0.5">:</div>
                   <CountdownCard value={timeLeft.hours} label="HOURS" />
-                  <div className="text-center text-lg sm:text-xs md:text-base lg:text-xl xl:text-2xl font-black text-red-900">:</div>
-                  <CountdownCard value={timeLeft.minutes} label="MINUTES" />
-                  <div className="text-center text-lg sm:text-xs md:text-base lg:text-xl xl:text-2xl font-black text-red-900">:</div>
-                  <CountdownCard value={timeLeft.seconds} label="SECONDS" />
+                  <div className="text-center text-xs sm:text-xl md:text-base lg:text-xl xl:text-2xl font-black text-red-900 px-0.5">:</div>
+                  <CountdownCard value={timeLeft.minutes} label="MIN" />
+                  <div className="text-center text-xs sm:text-xl md:text-base lg:text-xl xl:text-2xl font-black text-red-900 px-0.5">:</div>
+                  <CountdownCard value={timeLeft.seconds} label="SEC" />
                 </div>
               </div>
             </div>
