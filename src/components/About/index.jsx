@@ -82,24 +82,40 @@ const AboutUs = () => {
 
       <div className="container mx-auto px-4 sm:px-6 py-8 sm:py-12 lg:py-16">
         
-        {/* Event Description */}
-        <div className="text-center mb-12 sm:mb-16">
-          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-amber-900 mb-4 sm:mb-6">The Literary Celebration</h2>
+        
+       {/* Message from the Chairperson */}
+        <div className="mb-12 sm:mb-16">
+          <h3 className="text-2xl sm:text-3xl font-bold text-amber-900 text-center mb-8 sm:mb-10">Message from the Chairperson</h3>
           <div className="max-w-4xl mx-auto bg-gradient-to-br from-amber-50 to-orange-50 rounded-xl sm:rounded-2xl p-6 sm:p-8 shadow-xl border-2 border-amber-300">
-             <p className="text-2xl sm:text-lg text-amber-800 leading-relaxed mb-2 sm:mb-6 text-left">
-             <strong> Overview</strong>
+            <div className="text-center mb-6">
+              <div className="mx-auto mb-4 relative">
+                <div className="w-32 h-32 sm:w-40 sm:h-40 mx-auto">
+                  <img 
+                    src={chair} 
+                    alt="Akhter Jahan, PhD"
+                    className="w-32 h-32 sm:w-40 sm:h-40 rounded-full object-cover object-top border-4 border-amber-300 shadow-lg"
+                    style={{
+                      minWidth: '128px',
+                      minHeight: '128px',
+                      maxWidth: '160px',
+                      maxHeight: '160px'
+                    }}
+                  />
+                </div>
+              </div>
+            </div>
+            
+            <p className="text-base sm:text-lg text-amber-800 leading-relaxed mb-6 text-left">
+              It is with great pleasure that I welcome you to the Lit-Carnival 2025. This event offers a unique opportunity for participants and attendees alike to engage deeply with the world of literature and the arts. Your involvement, whether through performance, creation, or attendance, is what makes this celebration meaningful and memorable. I hope you find inspiration and enjoyment throughout the festivities.
             </p>
-            <p className="text-base sm:text-lg text-amber-800 leading-relaxed mb-4 sm:mb-6 text-left -mt-5">
-              The Department of English, East West University, invites you to the EWU Lit-Carnival 2025: an inter-university literary competition rolling into our
-               campus in a whirlwind of words, rhymes, and costumes. The Carnival aims to bring literature to life and make us imagine the classics anew.
-                University students from various disciplines across Bangladesh are encouraged to participate or attend; whether they are dreamers, performers,
-                 readers, artists, or poets, this is an opportunity for them to create, compose, and captivate. The university premises will come alive with the 
-                 festive spirit of the carnival, featuring themed stalls, visual installations, and interactive spaces that invite visitors to engage with arts
-                  and culture in myriad ways. Inspired by Mikhail Bakhtin's idea of the carnivalesque—a joyful, rule-breaking space, where hierarchies dissolve 
-                  and creativity reigns—the carnival aims to celebrate literature in joyous ways and make participants reimagine the classics while spotlighting 
-                  the creativity of our young ones. It will feature various exciting inter-university events in which you can compete to showcase your skills in the creative arts.
-            </p>
-          
+            
+            <div className="text-right">
+              <p className="text-base sm:text-lg font-semibold text-amber-900 mb-1">Warm Regards</p>
+              <p className="text-lg sm:text-xl font-bold text-red-700 mb-1">Akhter Jahan, PhD</p>
+              <p className="text-sm sm:text-base text-amber-700 leading-relaxed">Chairperson and Associate Professor</p>
+              <p className="text-sm sm:text-base text-amber-700">Department of English</p>
+              <p className="text-sm sm:text-base text-amber-700">East West University</p>
+            </div>
           </div>
         </div>
 
@@ -154,41 +170,7 @@ const AboutUs = () => {
           </div>
         </div>
 
-        {/* Message from the Chairperson */}
-        <div className="mb-12 sm:mb-16">
-          <h3 className="text-2xl sm:text-3xl font-bold text-amber-900 text-center mb-8 sm:mb-10">Message from the Chairperson</h3>
-          <div className="max-w-4xl mx-auto bg-gradient-to-br from-amber-50 to-orange-50 rounded-xl sm:rounded-2xl p-6 sm:p-8 shadow-xl border-2 border-amber-300">
-            <div className="text-center mb-6">
-              <div className="mx-auto mb-4 relative">
-                <div className="w-32 h-32 sm:w-40 sm:h-40 mx-auto">
-                  <img 
-                    src={chair} 
-                    alt="Akhter Jahan, PhD"
-                    className="w-32 h-32 sm:w-40 sm:h-40 rounded-full object-cover object-top border-4 border-amber-300 shadow-lg"
-                    style={{
-                      minWidth: '128px',
-                      minHeight: '128px',
-                      maxWidth: '160px',
-                      maxHeight: '160px'
-                    }}
-                  />
-                </div>
-              </div>
-            </div>
-            
-            <p className="text-base sm:text-lg text-amber-800 leading-relaxed mb-6 text-left">
-              It is with great pleasure that I welcome you to the Lit-Carnival 2025. This event offers a unique opportunity for participants and attendees alike to engage deeply with the world of literature and the arts. Your involvement, whether through performance, creation, or attendance, is what makes this celebration meaningful and memorable. I hope you find inspiration and enjoyment throughout the festivities.
-            </p>
-            
-            <div className="text-right">
-              <p className="text-base sm:text-lg font-semibold text-amber-900 mb-1">Warm Regards</p>
-              <p className="text-lg sm:text-xl font-bold text-red-700 mb-1">Akhter Jahan, PhD</p>
-              <p className="text-sm sm:text-base text-amber-700 leading-relaxed">Chairperson and Associate Professor</p>
-              <p className="text-sm sm:text-base text-amber-700">Department of English</p>
-              <p className="text-sm sm:text-base text-amber-700">East West University</p>
-            </div>
-          </div>
-        </div>
+        
       </div>
     </div>
   );

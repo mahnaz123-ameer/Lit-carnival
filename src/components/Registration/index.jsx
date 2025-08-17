@@ -104,7 +104,7 @@ const Registration = () => {
               <div className="bg-white bg-opacity-20 rounded-lg p-3 sm:p-4 backdrop-blur-sm">
                 <div className="flex items-center space-x-2 text-yellow-200">
                   <Calendar className="w-4 h-4 sm:w-5 sm:h-5" />
-                  <span className="font-semibold text-sm sm:text-base">October 16, 2025</span>
+                  <span className="font-semibold text-sm sm:text-base">September 05, 2025</span>
                 </div>
               </div>
             </div>

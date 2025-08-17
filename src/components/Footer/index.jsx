@@ -152,12 +152,12 @@ const Footer = () => {
           <div className="flex flex-col sm:flex-row justify-between items-center space-y-3 sm:space-y-0 text-center sm:text-left">
             <div className="order-2 sm:order-1">
               <p className="text-sm sm:text-base text-gray-200">
-                &copy; 2025 East West University Department of English. All rights reserved.
+                &copy; 2025 Department of English, East West University . All rights reserved.
               </p>
             </div>
             <div className="order-1 sm:order-2">
               <p className="text-sm sm:text-base text-gray-200">
-                Designed with <span className="text-red-300 animate-pulse">❤️</span> for literary enthusiasts
+                Developed by Mahnaz Ameer
               </p>
             </div>
           </div>

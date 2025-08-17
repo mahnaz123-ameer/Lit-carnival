@@ -22,7 +22,10 @@ const Segments = () => {
       icon: <Presentation className="w-6 h-6 sm:w-7 sm:h-7 lg:w-8 lg:h-8" />,
       title: 'Poster Presentation',
       timeLimit: 'Display format',
-      maxMembers: 'Individual or Pair 28✕22 inches',
+      maxMembers: 'Individual /Pair',
+      maxMembers1: ' 24✕36 inches',
+      maxMembers2: 'Vertical (Portrait) Orientation',
+       
       color: 'from-amber-600 to-orange-700',
       bgColor: 'from-amber-100 via-orange-50 to-red-100',
       themes: [
@@ -147,6 +150,19 @@ const Segments = () => {
                           <Users className="w-4 h-4 text-amber-700 flex-shrink-0" />
                           <span className="text-amber-800">{segment.maxMembers}</span>
                         </div>
+                        {/* Additional details for poster presentation */}
+                        {segment.id === 'poster' && segment.maxMembers1 && (
+                          <div className="flex items-center space-x-2 bg-amber-100 bg-opacity-80 px-3 py-1 rounded-full border border-amber-200">
+                            <Presentation className="w-4 h-4 text-amber-700 flex-shrink-0" />
+                            <span className="text-amber-800">{segment.maxMembers1}</span>
+                          </div>
+                        )}
+                        {segment.id === 'poster' && segment.maxMembers2 && (
+                          <div className="flex items-center space-x-2 bg-amber-100 bg-opacity-80 px-3 py-1 rounded-full border border-amber-200">
+                            <Presentation className="w-4 h-4 text-amber-700 flex-shrink-0" />
+                            <span className="text-amber-800">{segment.maxMembers2}</span>
+                          </div>
+                        )}
                       </div>
                     </div>
                   </div>
