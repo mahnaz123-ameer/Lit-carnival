@@ -275,7 +275,7 @@ const Home = ({ setCurrentPage }) => {
             <div className="group bg-white/10 backdrop-blur-md p-10 rounded-3xl border border-white/20 hover:bg-white/20 transition-all duration-300 transform hover:-translate-y-2">
               <Clock className="w-16 h-16 mx-auto mb-6 text-amber-300 group-hover:scale-110 transition-transform" />
               <h3 className="text-2xl font-bold mb-4">Registration Deadline</h3>
-              <p className="text-red-100 text-lg leading-relaxed">August 20, 2025<br />Don't miss out!</p>
+              <p className="text-red-100 text-lg leading-relaxed">September 05, 2025<br />Don't miss out!</p>
             </div>
             
             <div className="group bg-white/10 backdrop-blur-md p-10 rounded-3xl border border-white/20 hover:bg-white/20 transition-all duration-300 transform hover:-translate-y-2">

@@ -42,7 +42,7 @@ function Home() {
 
         {/* Date and Call for Participants */}
         <div className="text-center mb-12">
-          <div className="text-2xl font-bold text-blue-800 mb-4">OCTOBER 16, 2025</div>
+          <div className="text-2xl font-bold text-blue-800 mb-4">SEPTEMBER 05, 2025</div>
           <h2 className="text-4xl font-bold text-blue-900 mb-6">CALL FOR PARTICIPANTS</h2>
           
           <div className="bg-white/70 backdrop-blur-sm rounded-2xl p-8 shadow-xl max-w-5xl mx-auto">
@@ -185,7 +185,7 @@ function Home() {
               
               <div className="space-y-3 text-gray-700">
                 <div><strong>Venue:</strong> East West University</div>
-                <div><strong>Registration Deadline:</strong> August 20, 2025</div>
+                <div><strong>Registration Deadline:</strong> September 05, 2025</div>
                 <div><strong>Email:</strong> lit-carnival@ewubd.edu</div>
               </div>
               

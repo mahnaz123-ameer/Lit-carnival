@@ -118,7 +118,7 @@ const Footer = () => {
                 <Calendar className="w-4 h-4 sm:w-5 sm:h-5 mt-1 text-orange-300 flex-shrink-0" />
                 <div className="text-center lg:text-left">
                   <p className="text-sm sm:text-base text-orange-100 mb-1">Registration Deadline</p>
-                  <p className="text-sm sm:text-base text-white font-semibold">August 20, 2025</p>
+                  <p className="text-sm sm:text-base text-white font-semibold">September 05, 2025</p>
                 </div>
               </div>
               <div className="flex items-start justify-center lg:justify-start space-x-3">

@@ -46,7 +46,7 @@ const QuickInfoSection = () => {
             <Clock className="w-8 h-8 sm:w-10 sm:h-10 lg:w-12 lg:h-12 mx-auto mb-4 sm:mb-6 text-red-700 group-hover:scale-110 group-hover:rotate-6 transition-all duration-300" />
             <h3 className="text-xl sm:text-2xl lg:text-3xl font-bold mb-3 sm:mb-4 text-blue-800">Registration Deadline</h3>
             <p className="text-black text-base sm:text-lg lg:text-xl leading-relaxed font-medium">
-              August 20, 2025<br />
+            September 05, 2025<br />
               <span className="text-red-500 font-semibold">Don't miss out!</span>
             </p>
           </div>
