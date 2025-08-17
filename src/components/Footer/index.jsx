@@ -157,7 +157,7 @@ const Footer = () => {
             </div>
             <div className="order-1 sm:order-2">
               <p className="text-sm sm:text-base text-gray-200">
-               Designed & Developed by Mahnaz Ameer
+               Developed by Mahnaz Ameer
               </p>
             </div>
           </div>
