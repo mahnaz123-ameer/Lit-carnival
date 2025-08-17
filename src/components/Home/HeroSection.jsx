@@ -5,7 +5,7 @@ import litImage from '../../assets/hero1.png';
 import litImage2 from '../../assets/hero2.png';
 import litImage3 from '../../assets/hero3.png';
 
-const HeroSection = ({ setCurrentPage, mousePosition }) => {
+const HeroSection = ({ setCurrentPage, mousePosition, navigate }) => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const [timeLeft, setTimeLeft] = useState({
     days: 0,
@@ -50,6 +50,38 @@ const HeroSection = ({ setCurrentPage, mousePosition }) => {
     
     return () => clearInterval(interval);
   }, [images.length]);
+
+  // Handle registration navigation
+  const handleRegistrationClick = () => {
+    // Option 1: If using React Router
+    if (navigate) {
+      navigate('/registration');
+    }
+    // Option 2: If using window.location
+    else if (typeof window !== 'undefined') {
+      window.location.href = '/registration';
+    }
+    // Option 3: Fallback to setCurrentPage if provided
+    else if (setCurrentPage) {
+      setCurrentPage('registration');
+    }
+  };
+
+  // Handle segments navigation
+  const handleSegmentsClick = () => {
+    // Option 1: If using React Router
+    if (navigate) {
+      navigate('/segments');
+    }
+    // Option 2: If using window.location
+    else if (typeof window !== 'undefined') {
+      window.location.href = '/segments';
+    }
+    // Option 3: Fallback to setCurrentPage if provided
+    else if (setCurrentPage) {
+      setCurrentPage('segments');
+    }
+  };
 
   const CountdownCard = ({ value, label }) => (
     <div className="bg-amber-50/95 backdrop-blur-xl px-2 py-2 sm:px-3 sm:py-3 md:px-2 md:py-2 lg:px-3 lg:py-2 rounded-md sm:rounded-lg border-2 border-red-900/60 shadow-lg transform hover:scale-105 transition-all duration-300 flex-1 min-w-0 hover:bg-amber-100/95">
@@ -190,7 +222,7 @@ const HeroSection = ({ setCurrentPage, mousePosition }) => {
           {/* Better Mobile CTA Buttons */}
           <div className="flex flex-col gap-4 sm:gap-5 md:gap-4 lg:gap-6 md:flex-row justify-center items-center px-4 max-w-lg sm:max-w-xl md:max-w-2xl lg:max-w-4xl mx-auto">
             <button 
-              onClick={() => setCurrentPage && setCurrentPage('registration')}
+              onClick={handleRegistrationClick}
               className="group relative w-full md:w-auto md:flex-1 px-6 py-4 sm:px-7 sm:py-5 md:px-6 md:py-3 lg:px-10 lg:py-6 xl:px-12 xl:py-8 bg-gradient-to-r from-red-900 via-red-800 to-red-900 text-amber-100 font-bold text-base sm:text-lg md:text-base lg:text-xl xl:text-2xl rounded-lg sm:rounded-xl shadow-2xl hover:shadow-red-900/50 transition-all duration-500 transform hover:-translate-y-1 hover:scale-105 overflow-hidden border-2 border-amber-200/60"
             >
               <span className="relative z-10 flex items-center justify-center space-x-2 sm:space-x-3 lg:space-x-3" style={{fontFamily: 'serif'}}>
@@ -201,7 +233,7 @@ const HeroSection = ({ setCurrentPage, mousePosition }) => {
             </button>
             
             <button 
-              onClick={() => setCurrentPage && setCurrentPage('segments')}
+              onClick={handleSegmentsClick}
               className="group w-full md:w-auto md:flex-1 px-6 py-4 sm:px-7 sm:py-5 md:px-6 md:py-3 lg:px-10 lg:py-6 xl:px-12 xl:py-8 bg-amber-50/95 backdrop-blur-xl text-red-900 border-2 border-red-900/60 font-bold text-base sm:text-lg md:text-base lg:text-xl xl:text-2xl rounded-lg sm:rounded-xl shadow-xl hover:bg-amber-100/95 hover:border-red-900/80 transition-all duration-500 transform hover:-translate-y-1"
             >
               <span className="flex items-center justify-center space-x-2 sm:space-x-3 lg:space-x-3" style={{fontFamily: 'serif'}}>
