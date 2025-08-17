@@ -119,10 +119,10 @@ const HeroSection = ({ setCurrentPage, mousePosition }) => {
         ></div>
       )}
 
-      <div className="container mx-auto px-3 sm:px-4 lg:px-6 xl:px-8 text-center relative z-10 py-4 sm:py-8 md:py-10 flex-1 flex flex-col justify-center">
+      <div className="container mx-auto px-3 sm:px-4 lg:px-6 xl:px-8 text-center relative z-10 py-2 sm:py-8 md:py-10 flex-1 flex flex-col justify-center">
         <div className="max-w-6xl mx-auto">
           {/* Vintage Carnival Title */}
-          <div className="mb-3 sm:mb-6 md:mb-8 transform hover:scale-105 transition-all duration-700">
+          <div className="mb-2 sm:mb-6 md:mb-8 transform hover:scale-105 transition-all duration-700">
             <div className="relative">
               <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-black mb-1 sm:mb-3 tracking-tight leading-none">
                 <span className="bg-gradient-to-r from-red-900 via-red-800 to-red-900 bg-clip-text text-transparent drop-shadow-2xl" style={{fontFamily: 'serif'}}>
@@ -136,7 +136,7 @@ const HeroSection = ({ setCurrentPage, mousePosition }) => {
           </div>
           
           {/* Vintage Date Badge */}
-          <div className="inline-flex items-center space-x-2 sm:space-x-3 bg-red-900/90 backdrop-blur-xl px-3 py-2 sm:px-6 sm:py-3 md:px-8 md:py-4 rounded-xl shadow-2xl mb-3 sm:mb-6 md:mb-8 border-2 border-amber-200/60 hover:bg-red-800/90 transition-all duration-500 group">
+          <div className="inline-flex items-center space-x-2 sm:space-x-3 bg-red-900/90 backdrop-blur-xl px-3 py-1.5 sm:px-6 sm:py-3 md:px-8 md:py-4 rounded-xl shadow-2xl mb-2 sm:mb-6 md:mb-8 border-2 border-amber-200/60 hover:bg-red-800/90 transition-all duration-500 group">
             <Calendar className="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6 lg:w-7 lg:h-7 text-amber-100 group-hover:scale-110 transition-transform flex-shrink-0" />
             <span className="text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl font-bold text-amber-100" style={{fontFamily: 'serif'}}>
               16 OCTOBER 2025
@@ -144,8 +144,8 @@ const HeroSection = ({ setCurrentPage, mousePosition }) => {
           </div>
 
           {/* Countdown Timer - Fixed Container */}
-          <div className="mb-3 sm:mb-6 md:mb-8 w-full">
-            <div className="flex items-center justify-center mb-2 sm:mb-3">
+          <div className="mb-2 sm:mb-6 md:mb-8 w-full">
+            <div className="flex items-center justify-center mb-1 sm:mb-3">
               <Clock className="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6 text-red-900 mr-2 flex-shrink-0" />
               <h3 className="text-sm sm:text-base md:text-lg lg:text-xl font-bold text-red-900" style={{fontFamily: 'serif'}}>
                 Event Countdown
@@ -168,10 +168,10 @@ const HeroSection = ({ setCurrentPage, mousePosition }) => {
           </div>
         
           {/* Enhanced Description with Scroll */}
-          <div className="max-w-[280px] sm:max-w-md md:max-w-xl lg:max-w-2xl xl:max-w-3xl mx-auto mb-3 sm:mb-6 md:mb-8 px-2">
+          <div className="max-w-[280px] sm:max-w-md md:max-w-xl lg:max-w-2xl xl:max-w-3xl mx-auto mb-2 sm:mb-6 md:mb-8 px-2">
             <div className="bg-amber-50/95 backdrop-blur-xl rounded-lg sm:rounded-xl shadow-2xl border-2 border-red-900/40 relative overflow-hidden">
               {/* Scrollable Content */}
-              <div className="max-h-24 sm:max-h-40 md:max-h-48 lg:max-h-56 xl:max-h-64 overflow-y-auto p-3 sm:p-4 md:p-5 lg:p-6 xl:p-8 relative z-10 scrollbar-thin scrollbar-thumb-red-900/30 scrollbar-track-amber-100/50">
+              <div className="max-h-20 sm:max-h-40 md:max-h-48 lg:max-h-56 xl:max-h-64 overflow-y-auto p-2 sm:p-4 md:p-5 lg:p-6 xl:p-8 relative z-10 scrollbar-thin scrollbar-thumb-red-900/30 scrollbar-track-amber-100/50">
                 <p className="text-[10px] sm:text-xs md:text-sm lg:text-base xl:text-lg text-red-900 leading-relaxed" style={{fontFamily: 'serif'}}>
                   The Department of English, East West University, invites you to the EWU Lit-Carnival 2025: an inter-university literary competition rolling into our campus in a whirlwind of words, rhymes, and costumes. The Carnival aims to bring literature to life and make us imagine the classics anew.
                   University students from various disciplines across Bangladesh are encouraged to participate or attend; whether they are dreamers, performers, readers, artists, or poets, this is an opportunity for them to create, compose, and captivate.
@@ -188,7 +188,7 @@ const HeroSection = ({ setCurrentPage, mousePosition }) => {
           </div>
           
           {/* Mobile-Optimized CTA Buttons */}
-          <div className="flex flex-col gap-2 sm:gap-3 md:gap-4 md:flex-row justify-center items-center px-3 max-w-lg sm:max-w-xl md:max-w-2xl mx-auto">
+          <div className="flex flex-col gap-2 sm:gap-3 md:gap-4 md:flex-row justify-center items-center px-3 max-w-lg sm:max-w-xl md:max-w-2xl mx-auto mt-2">
             <button 
               onClick={() => setCurrentPage && setCurrentPage('registration')}
               className="group relative w-full md:w-auto md:flex-1 px-4 py-2.5 sm:px-5 sm:py-3 md:px-6 md:py-3 lg:px-8 lg:py-4 bg-gradient-to-r from-red-900 via-red-800 to-red-900 text-amber-100 font-bold text-xs sm:text-sm md:text-base lg:text-lg rounded-lg sm:rounded-xl shadow-2xl hover:shadow-red-900/50 transition-all duration-500 transform hover:-translate-y-1 hover:scale-105 overflow-hidden border-2 border-amber-200/60"
