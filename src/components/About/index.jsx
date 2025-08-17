@@ -106,7 +106,7 @@ const AboutUs = () => {
             </div>
             
             <p className="text-base sm:text-lg text-amber-800 leading-relaxed mb-6 text-left">
-              It is with great pleasure that I welcome you to the Lit-Carnival 2025. This event offers a unique opportunity for participants and attendees alike to engage deeply with the world of literature and the arts. Your involvement, whether through performance, creation, or attendance, is what makes this celebration meaningful and memorable. I hope you find inspiration and enjoyment throughout the festivities.
+              It is with great pleasure that I welcome you to EWU Lit-Carnival 2025. This event offers a unique opportunity for participants and attendees alike to engage deeply with the world of literature and the arts. Your involvement, whether through performance, creation, or attendance, is what makes this celebration meaningful and memorable. I hope you find inspiration and enjoyment throughout the festivities.
             </p>
             
             <div className="text-right">

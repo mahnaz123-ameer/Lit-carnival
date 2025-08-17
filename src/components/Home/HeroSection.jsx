@@ -188,11 +188,11 @@ const HeroSection = ({ setCurrentPage, mousePosition, navigate }) => {
               <div className="max-w-sm sm:max-w-lg md:max-w-lg lg:max-w-2xl xl:max-w-3xl mx-auto">
                 <div className="grid grid-cols-7 gap-1 sm:gap-2 md:gap-2 lg:gap-4 items-center">
                   <CountdownCard value={timeLeft.days} label="DAYS" />
-                  <div className="text-center text-lg sm:text-xl md:text-base lg:text-xl xl:text-2xl font-black text-red-900">:</div>
+                  <div className="text-center text-lg sm:text-xs md:text-base lg:text-xl xl:text-2xl font-black text-red-900">:</div>
                   <CountdownCard value={timeLeft.hours} label="HOURS" />
-                  <div className="text-center text-lg sm:text-xl md:text-base lg:text-xl xl:text-2xl font-black text-red-900">:</div>
+                  <div className="text-center text-lg sm:text-xs md:text-base lg:text-xl xl:text-2xl font-black text-red-900">:</div>
                   <CountdownCard value={timeLeft.minutes} label="MINUTES" />
-                  <div className="text-center text-lg sm:text-xl md:text-base lg:text-xl xl:text-2xl font-black text-red-900">:</div>
+                  <div className="text-center text-lg sm:text-xs md:text-base lg:text-xl xl:text-2xl font-black text-red-900">:</div>
                   <CountdownCard value={timeLeft.seconds} label="SECONDS" />
                 </div>
               </div>
