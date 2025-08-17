@@ -119,23 +119,12 @@ const HeroSection = ({ setCurrentPage, mousePosition }) => {
         ></div>
       )}
 
-      {/* Floating Animated Elements */}
-      <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute top-1/4 left-1/4 w-4 h-4 text-red-900 opacity-30 animate-ping" style={{animationDelay: '1s'}}>✦</div>
-        <div className="absolute bottom-1/4 right-1/3 w-3 h-3 text-amber-800 opacity-25 animate-pulse" style={{animationDelay: '3s'}}>✧</div>
-        <div className="absolute top-1/3 right-1/4 w-5 h-5 text-red-800 opacity-20 animate-bounce" style={{animationDelay: '2s'}}>★</div>
-        <div className="absolute top-1/5 right-1/5 w-6 h-6 text-blue-800 opacity-15 animate-spin" style={{animationDelay: '4s', animationDuration: '8s'}}>🎭</div>
-      </div>
-
-      <div className="container mx-auto px-3 sm:px-4 lg:px-6 xl:px-8 text-center relative z-10 py-6 sm:py-8 md:py-10 flex-1 flex flex-col justify-center">
+      <div className="container mx-auto px-3 sm:px-4 lg:px-6 xl:px-8 text-center relative z-10 py-4 sm:py-8 md:py-10 flex-1 flex flex-col justify-center">
         <div className="max-w-6xl mx-auto">
           {/* Vintage Carnival Title */}
-          <div className="mb-4 sm:mb-6 md:mb-8 transform hover:scale-105 transition-all duration-700">
+          <div className="mb-3 sm:mb-6 md:mb-8 transform hover:scale-105 transition-all duration-700">
             <div className="relative">
-              {/* Decorative carnival elements around title */}
-              <div className="absolute -top-3 sm:-top-4 left-1/2 transform -translate-x-1/2 text-red-900/20 text-xl sm:text-2xl">🎪</div>
-              
-              <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-black mb-2 sm:mb-3 tracking-tight leading-none">
+              <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-black mb-1 sm:mb-3 tracking-tight leading-none">
                 <span className="bg-gradient-to-r from-red-900 via-red-800 to-red-900 bg-clip-text text-transparent drop-shadow-2xl" style={{fontFamily: 'serif'}}>
                   EWU LIT-CARNIVAL
                 </span>
@@ -147,7 +136,7 @@ const HeroSection = ({ setCurrentPage, mousePosition }) => {
           </div>
           
           {/* Vintage Date Badge */}
-          <div className="inline-flex items-center space-x-2 sm:space-x-3 bg-red-900/90 backdrop-blur-xl px-4 py-2 sm:px-6 sm:py-3 md:px-8 md:py-4 rounded-xl shadow-2xl mb-4 sm:mb-6 md:mb-8 border-2 border-amber-200/60 hover:bg-red-800/90 transition-all duration-500 group">
+          <div className="inline-flex items-center space-x-2 sm:space-x-3 bg-red-900/90 backdrop-blur-xl px-3 py-2 sm:px-6 sm:py-3 md:px-8 md:py-4 rounded-xl shadow-2xl mb-3 sm:mb-6 md:mb-8 border-2 border-amber-200/60 hover:bg-red-800/90 transition-all duration-500 group">
             <Calendar className="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6 lg:w-7 lg:h-7 text-amber-100 group-hover:scale-110 transition-transform flex-shrink-0" />
             <span className="text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl font-bold text-amber-100" style={{fontFamily: 'serif'}}>
               16 OCTOBER 2025
@@ -155,7 +144,7 @@ const HeroSection = ({ setCurrentPage, mousePosition }) => {
           </div>
 
           {/* Countdown Timer - Fixed Container */}
-          <div className="mb-4 sm:mb-6 md:mb-8 w-full">
+          <div className="mb-3 sm:mb-6 md:mb-8 w-full">
             <div className="flex items-center justify-center mb-2 sm:mb-3">
               <Clock className="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6 text-red-900 mr-2 flex-shrink-0" />
               <h3 className="text-sm sm:text-base md:text-lg lg:text-xl font-bold text-red-900" style={{fontFamily: 'serif'}}>
@@ -164,7 +153,7 @@ const HeroSection = ({ setCurrentPage, mousePosition }) => {
             </div>
             
             <div className="w-full px-2 sm:px-4 md:px-6">
-              <div className="max-w-[300px] sm:max-w-md md:max-w-lg lg:max-w-xl mx-auto">
+              <div className="max-w-[280px] sm:max-w-md md:max-w-lg lg:max-w-xl mx-auto">
                 <div className="grid grid-cols-7 gap-0.5 sm:gap-1 md:gap-2 items-center">
                   <CountdownCard value={timeLeft.days} label="DAYS" />
                   <div className="text-center text-xs sm:text-sm md:text-base font-black text-red-900">:</div>
@@ -179,16 +168,10 @@ const HeroSection = ({ setCurrentPage, mousePosition }) => {
           </div>
         
           {/* Enhanced Description with Scroll */}
-          <div className="max-w-[300px] sm:max-w-md md:max-w-xl lg:max-w-2xl xl:max-w-3xl mx-auto mb-4 sm:mb-6 md:mb-8 px-2">
+          <div className="max-w-[280px] sm:max-w-md md:max-w-xl lg:max-w-2xl xl:max-w-3xl mx-auto mb-3 sm:mb-6 md:mb-8 px-2">
             <div className="bg-amber-50/95 backdrop-blur-xl rounded-lg sm:rounded-xl shadow-2xl border-2 border-red-900/40 relative overflow-hidden">
-              {/* Decorative corner elements */}
-              <div className="absolute top-1 left-1 sm:top-2 sm:left-2 text-red-900/20 text-xs sm:text-sm z-20">🎭</div>
-              <div className="absolute top-1 right-1 sm:top-2 sm:right-2 text-blue-800/20 text-xs sm:text-sm z-20">📚</div>
-              <div className="absolute bottom-1 left-1 sm:bottom-2 sm:left-2 text-amber-800/20 text-xs sm:text-sm z-20">✨</div>
-              <div className="absolute bottom-1 right-1 sm:bottom-2 sm:right-2 text-red-900/20 text-xs sm:text-sm z-20">🎪</div>
-              
               {/* Scrollable Content */}
-              <div className="max-h-32 sm:max-h-40 md:max-h-48 lg:max-h-56 xl:max-h-64 overflow-y-auto p-3 sm:p-4 md:p-5 lg:p-6 xl:p-8 relative z-10 scrollbar-thin scrollbar-thumb-red-900/30 scrollbar-track-amber-100/50">
+              <div className="max-h-24 sm:max-h-40 md:max-h-48 lg:max-h-56 xl:max-h-64 overflow-y-auto p-3 sm:p-4 md:p-5 lg:p-6 xl:p-8 relative z-10 scrollbar-thin scrollbar-thumb-red-900/30 scrollbar-track-amber-100/50">
                 <p className="text-[10px] sm:text-xs md:text-sm lg:text-base xl:text-lg text-red-900 leading-relaxed" style={{fontFamily: 'serif'}}>
                   The Department of English, East West University, invites you to the EWU Lit-Carnival 2025: an inter-university literary competition rolling into our campus in a whirlwind of words, rhymes, and costumes. The Carnival aims to bring literature to life and make us imagine the classics anew.
                   University students from various disciplines across Bangladesh are encouraged to participate or attend; whether they are dreamers, performers, readers, artists, or poets, this is an opportunity for them to create, compose, and captivate.
@@ -198,7 +181,7 @@ const HeroSection = ({ setCurrentPage, mousePosition }) => {
               </div>
               
               {/* Scroll Indicator */}
-              <div className="absolute bottom-2 right-2 sm:bottom-3 sm:right-3 text-red-900/40 text-xs sm:text-sm animate-bounce z-20">
+              <div className="absolute bottom-1 sm:bottom-3 sm:right-3 right-2 text-red-900/40 text-xs sm:text-sm animate-bounce z-20">
                 ↓
               </div>
             </div>
