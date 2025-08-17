@@ -192,7 +192,7 @@ const ContactUs = () => {
                   </div>
                   <div className="min-w-0 flex-1">
                     <h3 className="font-semibold text-gray-800 text-sm sm:text-base">Registration Deadline</h3>
-                    <p className="text-gray-600 text-sm sm:text-base">ASeptember 05 2025</p>
+                    <p className="text-gray-600 text-sm sm:text-base">September 05 2025</p>
                   </div>
                 </div>
 
