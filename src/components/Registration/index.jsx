@@ -155,7 +155,7 @@ const Registration = () => {
         <div className="bg-gradient-to-br from-amber-50 to-orange-50 rounded-xl sm:rounded-2xl shadow-xl p-6 sm:p-8 mb-6 sm:mb-8 border-2 border-amber-300">
           <div className="text-center mb-6 sm:mb-8">
             <Trophy className="w-12 h-12 sm:w-16 sm:h-16 mx-auto text-red-700 mb-3 sm:mb-4" />
-            <h3 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-amber-900 mb-2 sm:mb-3">Competition Segments</h3>
+            <h3 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-amber-900 mb-2 sm:mb-3">Competitive Segments</h3>
             <p className="text-base sm:text-lg text-amber-700">Select the segments you want to participate in</p>
           </div>
           

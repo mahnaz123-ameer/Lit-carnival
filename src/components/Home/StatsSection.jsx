@@ -5,7 +5,7 @@ const StatsSection = () => {
   const stats = [
     { number: "200+", label: "Creative Participants", icon: <Users className="w-5 h-5 sm:w-6 sm:h-6" />, color: "from-blue-500 to-cyan-500" },
     { number: "20+", label: "Participant Universities", icon: <Globe className="w-5 h-5 sm:w-6 sm:h-6" />, color: "from-green-500 to-emerald-500" },
-    { number: "5", label: "Competition Segments", icon: <Star className="w-5 h-5 sm:w-6 sm:h-6" />, color: "from-purple-500 to-violet-500" }
+    { number: "5", label: "Competitive Segments", icon: <Star className="w-5 h-5 sm:w-6 sm:h-6" />, color: "from-purple-500 to-violet-500" }
   ];
 
   return (
