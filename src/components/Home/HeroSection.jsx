@@ -96,7 +96,7 @@ const HeroSection = ({ setCurrentPage, mousePosition, navigate }) => {
 
   return (
     <div className="relative min-h-screen lg:h-[1300px] flex flex-col overflow-hidden" style={{backgroundColor: '#F5E6D3'}}>
-      {/* Background with Image Carousel and Vintage Overlay */}
+      {/* Background with Image Carousel - Reduced Overlay for Better Visibility */}
       <div className="absolute inset-0">
         {images.map((image, index) => (
           <div
@@ -112,17 +112,17 @@ const HeroSection = ({ setCurrentPage, mousePosition, navigate }) => {
             />
           </div>
         ))}
-        {/* Vintage paper-like overlay */}
+        {/* Lighter vintage paper-like overlay - More transparent to show images */}
         <div className="absolute inset-0" style={{
           background: `linear-gradient(135deg, 
-            rgba(245, 230, 211, 0.92) 0%,
-            rgba(240, 220, 200, 0.88) 25%,
-            rgba(235, 210, 185, 0.85) 50%,
-            rgba(230, 200, 170, 0.90) 75%,
-            rgba(245, 230, 211, 0.95) 100%)`
+            rgba(245, 230, 211, 0.75) 0%,
+            rgba(240, 220, 200, 0.65) 25%,
+            rgba(235, 210, 185, 0.60) 50%,
+            rgba(230, 200, 170, 0.70) 75%,
+            rgba(245, 230, 211, 0.80) 100%)`
         }}></div>
-        {/* Additional warm vintage tint */}
-        <div className="absolute inset-0 bg-gradient-to-br from-amber-100/30 via-transparent to-red-100/20"></div>
+        {/* Reduced warm vintage tint */}
+        <div className="absolute inset-0 bg-gradient-to-br from-amber-100/20 via-transparent to-red-100/15"></div>
       </div>
 
       {/* Image Indicators */}
@@ -143,7 +143,7 @@ const HeroSection = ({ setCurrentPage, mousePosition, navigate }) => {
       {/* Dynamic Mouse-Following Elements - Vintage themed */}
       {mousePosition && (
         <div 
-          className="hidden xl:block absolute w-96 h-96 bg-gradient-to-r from-amber-200/20 to-red-200/15 rounded-full blur-3xl transition-all duration-1000 ease-out"
+          className="hidden xl:block absolute w-96 h-96 bg-gradient-to-r from-amber-200/15 to-red-200/10 rounded-full blur-3xl transition-all duration-1000 ease-out"
           style={{
             left: mousePosition.x - 192,
             top: mousePosition.y - 192,
