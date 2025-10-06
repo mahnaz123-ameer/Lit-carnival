@@ -157,7 +157,7 @@ const Footer = () => {
             </div>
             <div className="order-1 sm:order-2">
               <p className="text-sm sm:text-base text-gray-200">
-               Developed by <strong> Mahnaz Ameer </strong>
+               {/* Developed by <strong> Mahnaz Ameer </strong> */}
               </p>
             </div>
           </div>
