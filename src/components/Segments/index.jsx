@@ -1,7 +1,9 @@
-import React from 'react';
-import { Clock, Users, Presentation, Mic, Theater, Palette, Sparkles, Calendar } from 'lucide-react';
+import React, { useState } from 'react';
+import { Clock, Users, Presentation, Mic, Theater, Palette, Sparkles, Calendar, BookOpen, ClipboardList } from 'lucide-react';
 
 const Segments = () => {
+  const [activeTab, setActiveTab] = useState({});
+
   const segments = [
     {
       id: 'drama',
@@ -43,7 +45,7 @@ const Segments = () => {
       color: 'from-yellow-600 to-amber-700',
       bgColor: 'from-yellow-100 via-amber-50 to-orange-100',
       themes: [
-        'Theme and guidelines will be announced at the start of the competition'
+        'Theme will be announced at the start of the competition'
       ]
     },
     {
@@ -81,6 +83,14 @@ const Segments = () => {
       ]
     }
   ];
+
+  const handleTabChange = (segmentId, tab) => {
+    setActiveTab(prev => ({ ...prev, [segmentId]: tab }));
+  };
+
+  const getActiveTab = (segmentId) => {
+    return activeTab[segmentId] || 'themes';
+  };
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-amber-50 to-orange-50">
@@ -127,7 +137,7 @@ const Segments = () => {
         {/* Segments Grid - Mobile Responsive */}
         <div className="space-y-8 sm:space-y-12">
           {segments.map((segment, index) => (
-            <div key={segment.id} className={`bg-gradient-to-r ${segment.bgColor} rounded-xl sm:rounded-2xl p-6 sm:p-8 shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1`}>
+            <div key={segment.id} className={`bg-gradient-to-r ${segment.bgColor} rounded-xl sm:rounded-2xl p-6 sm:p-8 shadow-xl hover:shadow-2xl transition-all duration-300`}>
               <div className="flex flex-col lg:flex-row items-start space-y-6 lg:space-y-0 lg:space-x-8">
                 {/* Icon and Title */}
                 <div className="flex-shrink-0">
@@ -167,43 +177,213 @@ const Segments = () => {
                     </div>
                   </div>
 
-                  {/* Themes */}
-                  <div>
-                    <h3 className="text-lg sm:text-xl font-semibold text-amber-900 mb-3 sm:mb-4">
-                      {segment.id === 'poetry' ? 'Competition Format:' : 
-                       segment.id === 'masquerade' ? 'Event Details:' : 'Themes:'}
-                    </h3>
-                    <div className="grid gap-2 sm:gap-3">
-                      {segment.themes.map((theme, themeIndex) => (
-                        theme === '---divider---' ? (
-                          <div key={themeIndex} className="border-t-2 border-amber-300 my-2 sm:my-3"></div>
-                        ) : (
-                          <div key={themeIndex} className="bg-amber-50 bg-opacity-90 p-3 sm:p-4 rounded-lg shadow-sm border border-amber-200 hover:shadow-md hover:bg-amber-100 transition-all">
-                            <p className="text-amber-900 font-medium text-sm sm:text-base">{theme}</p>
-                          </div>
-                        )
-                      ))}
-                    </div>
-                  </div>
-
-                  {/* Additional Info for specific segments */}
-                  {segment.id === 'cosplay' && (
-                    <div className="mt-4 sm:mt-6 p-3 sm:p-4 bg-amber-100 bg-opacity-80 rounded-lg border border-amber-200">
-                      <h4 className="font-semibold text-amber-900 mb-2 text-sm sm:text-base">Competition Categories:</h4>
-                      <div className="grid grid-cols-1 md:grid-cols-2 gap-2 text-xs sm:text-sm text-amber-800">
-                        <div>• Comic-Con: Characters from comics, anime, movies, video games, and TV shows</div>
-                        <div>• Literary Cosplay: Characters from novels, plays, films, and graphic novels</div>
-                      </div>
+                  {/* Tab Navigation - Only show for segments with guidelines */}
+                  {['drama', 'poster', 'poetry', 'cosplay'].includes(segment.id) && (
+                    <div className="flex space-x-2 mb-4 border-b-2 border-amber-200">
+                      <button
+                        onClick={() => handleTabChange(segment.id, 'themes')}
+                        className={`flex items-center space-x-2 px-4 py-2 font-semibold text-sm sm:text-base transition-all ${
+                          getActiveTab(segment.id) === 'themes'
+                            ? 'text-amber-900 border-b-2 border-amber-700 -mb-0.5'
+                            : 'text-amber-600 hover:text-amber-800'
+                        }`}
+                      >
+                        <BookOpen className="w-4 h-4" />
+                        <span>Themes</span>
+                      </button>
+                      <button
+                        onClick={() => handleTabChange(segment.id, 'guidelines')}
+                        className={`flex items-center space-x-2 px-4 py-2 font-semibold text-sm sm:text-base transition-all ${
+                          getActiveTab(segment.id) === 'guidelines'
+                            ? 'text-amber-900 border-b-2 border-amber-700 -mb-0.5'
+                            : 'text-amber-600 hover:text-amber-800'
+                        }`}
+                      >
+                        <ClipboardList className="w-4 h-4" />
+                        <span>Guidelines</span>
+                      </button>
                     </div>
                   )}
 
-                  {segment.id === 'poster' && (
-                    <div className="mt-4 sm:mt-6 p-3 sm:p-4 bg-amber-100 bg-opacity-80 rounded-lg border border-amber-200">
-                      <h4 className="font-semibold text-amber-900 mb-2 text-sm sm:text-base">Presentation Format:</h4>
-                      <p className="text-xs sm:text-sm text-amber-800">
-                        Participants will bring their posters and display them at EWU. 
-                        Creative visual presentations combining literature with modern themes are encouraged.
-                      </p>
+                  {/* Themes Tab Content */}
+                  {(getActiveTab(segment.id) === 'themes' || segment.id === 'masquerade') && (
+                    <div>
+                      <h3 className="text-lg sm:text-xl font-semibold text-amber-900 mb-3 sm:mb-4">
+                        {segment.id === 'poetry' ? 'Competition Format:' : 
+                         segment.id === 'masquerade' ? 'Event Details:' : 'Themes:'}
+                      </h3>
+                      <div className="grid gap-2 sm:gap-3">
+                        {segment.themes.map((theme, themeIndex) => (
+                          theme === '---divider---' ? (
+                            <div key={themeIndex} className="border-t-2 border-amber-300 my-2 sm:my-3"></div>
+                          ) : (
+                            <div key={themeIndex} className="bg-amber-50 bg-opacity-90 p-3 sm:p-4 rounded-lg shadow-sm border border-amber-200 hover:shadow-md hover:bg-amber-100 transition-all">
+                              <p className="text-amber-900 font-medium text-sm sm:text-base">{theme}</p>
+                            </div>
+                          )
+                        ))}
+                      </div>
+
+                      {/* Presentation Format for Poster Presentation */}
+                      {segment.id === 'poster' && (
+                        <div className="mt-4 sm:mt-6 p-3 sm:p-4 bg-amber-100 bg-opacity-80 rounded-lg border border-amber-200">
+                          <h4 className="font-semibold text-amber-900 mb-2 text-sm sm:text-base">Presentation Format:</h4>
+                          <p className="text-xs sm:text-sm text-amber-800">
+                            Participants will bring their posters and display them at EWU. 
+                            Creative visual presentations combining literature with modern themes are encouraged.
+                          </p>
+                        </div>
+                      )}
+
+                      {/* Competition Categories for Cosplay */}
+                      {segment.id === 'cosplay' && (
+                        <div className="mt-4 sm:mt-6 p-3 sm:p-4 bg-amber-100 bg-opacity-80 rounded-lg border border-amber-200">
+                          <h4 className="font-semibold text-amber-900 mb-2 text-sm sm:text-base">Competition Categories:</h4>
+                          <div className="grid grid-cols-1 md:grid-cols-2 gap-2 text-xs sm:text-sm text-amber-800">
+                            <div>• Comic-Con: Characters from comics, anime, movies, video games, and TV shows</div>
+                            <div>• Literary Cosplay: Characters from novels, plays, films, and graphic novels</div>
+                          </div>
+                        </div>
+                      )}
+                    </div>
+                  )}
+
+                  {/* Guidelines Tab Content */}
+                  {getActiveTab(segment.id) === 'guidelines' && (
+                    <div>
+                      <h3 className="text-lg sm:text-xl font-semibold text-amber-900 mb-3 sm:mb-4">Competition Guidelines</h3>
+                      
+                      {/* Drama Guidelines */}
+                      {segment.id === 'drama' && (
+                        <div className="space-y-3 sm:space-y-4">
+                          <div className="p-3 sm:p-4 bg-red-50 bg-opacity-90 rounded-lg border border-red-200">
+                            <h4 className="font-semibold text-red-900 mb-2 text-sm sm:text-base">⚠️ Prohibited Items & Effects</h4>
+                            <ul className="space-y-1 text-xs sm:text-sm text-red-800">
+                              <li>• No use of fire, flames, or fireworks</li>
+                              <li>• Smoke machines or fog machines are not permitted</li>
+                              <li>• Avoid using any items that create mess on the stage (e.g., confetti, powder, liquids)</li>
+                              <li>• Spray paints, color powders, or similar materials are strictly prohibited</li>
+                            </ul>
+                          </div>
+                          <div className="p-3 sm:p-4 bg-amber-100 bg-opacity-80 rounded-lg border border-amber-200">
+                            <h4 className="font-semibold text-amber-900 mb-2 text-sm sm:text-base">Props & Costumes</h4>
+                            <ul className="space-y-1 text-xs sm:text-sm text-amber-800">
+                              <li>• Teams must arrange and bring their own props</li>
+                              <li>• Costumes should be appropriate and must not be culturally insensitive in any way</li>
+                            </ul>
+                          </div>
+                          <div className="p-3 sm:p-4 bg-amber-100 bg-opacity-80 rounded-lg border border-amber-200">
+                            <h4 className="font-semibold text-amber-900 mb-2 text-sm sm:text-base">Lighting & Technical Support</h4>
+                            <ul className="space-y-1 text-xs sm:text-sm text-amber-800">
+                              <li>• Standard stage lights will be provided by organizers</li>
+                              <li>• Additional spotlights are not allowed</li>
+                              <li>• For multimedia support (audio, video, projections), teams must contact organizers in advance</li>
+                            </ul>
+                          </div>
+                        </div>
+                      )}
+
+                      {/* Poetry Guidelines */}
+                      {segment.id === 'poetry' && (
+                        <div className="space-y-3 sm:space-y-4">
+                          <div className="p-3 sm:p-4 bg-yellow-50 bg-opacity-90 rounded-lg border border-yellow-200">
+                            <h4 className="font-semibold text-yellow-900 mb-2 text-sm sm:text-base">Competition Format</h4>
+                            <div className="space-y-2 text-xs sm:text-sm text-yellow-800">
+                              <div><span className="font-semibold">Time Allocation:</span> Participants will be given a fixed duration to compose an original short poem based on a theme given on the spot.</div>
+                              <div><span className="font-semibold">Recitation:</span> After composing the poem, each participant will recite their poem in front of the judges and audience.</div>
+                              <div><span className="font-semibold">Language:</span> Poems must be written and recited in English.</div>
+                            </div>
+                          </div>
+                          <div className="p-3 sm:p-4 bg-amber-100 bg-opacity-80 rounded-lg border border-amber-200">
+                            <h4 className="font-semibold text-amber-900 mb-2 text-sm sm:text-base">Requirements & Delivery</h4>
+                            <ul className="space-y-1 text-xs sm:text-sm text-amber-800">
+                              <li>• Poems must be original, written during the contest</li>
+                              <li>• Plagiarism or pre-prepared work will result in disqualification</li>
+                              <li>• Mobile phones are not allowed during the competition</li>
+                              <li>• Participants are encouraged to use expressive intonation, rhythm, and clarity</li>
+                              <li>• Only microphones will be provided; no props, background music, or digital assistance allowed</li>
+                            </ul>
+                          </div>
+                          <div className="p-3 sm:p-4 bg-amber-100 bg-opacity-80 rounded-lg border border-amber-200">
+                            <h4 className="font-semibold text-amber-900 mb-2 text-sm sm:text-base">General Conduct</h4>
+                            <p className="text-xs sm:text-sm text-amber-800">
+                              Participants must maintain decorum, respect the given time limits, and ensure their poem does not contain offensive content.
+                            </p>
+                          </div>
+                        </div>
+                      )}
+
+                      {/* Cosplay Guidelines */}
+                      {segment.id === 'cosplay' && (
+                        <div className="space-y-3 sm:space-y-4">
+                         
+                          <div className="p-3 sm:p-4 bg-amber-100 bg-opacity-80 rounded-lg border border-amber-200">
+                            <h4 className="font-semibold text-amber-900 mb-2 text-sm sm:text-base">Performance Format</h4>
+                            <ul className="space-y-1 text-xs sm:text-sm text-amber-800">
+                              <li>• Format: On-stage cosplay walk</li>
+                              <li>• Performances and costumes must align with the official themes of the EWU Lit-Carnival 2025.</li>
+                              <li>• Cosplayers will perform on the main stage during the scheduled segment</li>
+                            </ul>
+                          </div>
+                          <div className="p-3 sm:p-4 bg-amber-100 bg-opacity-80 rounded-lg border border-amber-200">
+                            <h4 className="font-semibold text-amber-900 mb-2 text-sm sm:text-base">Costume Requirements</h4>
+                            <ul className="space-y-1 text-xs sm:text-sm text-amber-800">
+                              <li>• Costumes may include fabric, props, and lightweight accessories</li>
+                              <li>• No real weapons or hazardous items allowed</li>
+                              <li>• Costumes should not be culturally insensitive</li>
+                            </ul>
+                          </div>
+                          <div className="p-3 sm:p-4 bg-red-50 bg-opacity-90 rounded-lg border border-red-200">
+                            <h4 className="font-semibold text-red-900 mb-2 text-sm sm:text-base">⚠️ Character Description Required</h4>
+                            <div className="text-xs sm:text-sm text-red-800 space-y-2">
+                              <p>Each cosplay act must register with participant name(s), character name(s), and source (novel, comic, anime, etc.).</p>
+                              <p className="font-semibold">A 50-100 words description for each Cosplay/ComiCon character must be emailed to the University Team members by October 6, 2025.</p>
+                              <p>Subject line: <span className="font-semibold">Cosplay/ComiCon Character Description</span></p>
+                              <div className="mt-2 p-2 bg-amber-50 rounded border border-amber-200">
+                                <p className="font-semibold mb-1">Sample Description:</p>
+                                <p className="italic">"Now gracing the stage is Ophelia—Shakespeare's delicate flower from Hamlet. Loved deeply, yet torn by duty and despair, she embodies innocence touched by tragedy. Her songs whisper of love, her silence speaks of sorrow, and her presence reminds us of the fragility of the human heart."</p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      )}
+
+                      {/* Poster Guidelines */}
+                      {segment.id === 'poster' && (
+                        <div className="space-y-3 sm:space-y-4">
+                          <div className="p-3 sm:p-4 bg-amber-100 bg-opacity-80 rounded-lg border border-amber-200">
+                            <h4 className="font-semibold text-amber-900 mb-2 text-sm sm:text-base">Presentation Requirements</h4>
+                            <ul className="space-y-1 text-xs sm:text-sm text-amber-800">
+                              <li>• Posters must align with one of the official themes</li>
+                              <li>• Size: 24 x 36 inches</li>
+                              <li>• Format: Printed, physical posters only (No digital or projected posters)</li>
+                              <li>• Display Method: Posters must be mountable on standard display boards (available at venue)</li>
+                            </ul>
+                          </div>
+                          <div className="p-3 sm:p-4 bg-amber-100 bg-opacity-80 rounded-lg border border-amber-200">
+                            <h4 className="font-semibold text-amber-900 mb-2 text-sm sm:text-base">Allowed Materials</h4>
+                            <ul className="space-y-1 text-xs sm:text-sm text-amber-800">
+                              <li>• Printed paper, photo paper, foam board and/or lightweight decorations are allowed</li>
+                              <li>• No 3D models or electronic components are allowed</li>
+                              <li>• The poster must include the title, participant name(s), and institution clearly at the bottom</li>
+                            </ul>
+                          </div>
+                          <div className="p-3 sm:p-4 bg-red-50 bg-opacity-90 rounded-lg border border-red-200">
+                            <h4 className="font-semibold text-red-900 mb-2 text-sm sm:text-base">⚠️ Important Submission Details</h4>
+                            <div className="text-xs sm:text-sm text-red-800 space-y-2">
+                              <p className="font-semibold">Submission Deadline: October 15, 2025 (by 3 PM)</p>
+                              <p>Location: Department of English, EWU</p>
+                              <p>Contact during submission:</p>
+                              <ul className="ml-4 space-y-1">
+                                <li>• Mr. Akul Sheikh: 01680156667</li>
+                                <li>• Mr. Jasim Uddin: 01921000538</li>
+                              </ul>
+                              <p className="font-semibold mt-2">Late submissions may not be accepted.</p>
+                              <p>Presenters must be present on the day of the competition during their allocated time (mentioned in program schedule).</p>
+                            </div>
+                          </div>
+                        </div>
+                      )}
                     </div>
                   )}
                 </div>
