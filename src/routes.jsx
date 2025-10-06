@@ -128,7 +128,7 @@ const HeroSection = ({ mousePosition }) => {
             <div className="relative">
               <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl 2xl:text-8xl font-black mb-2 sm:mb-4 lg:mb-6 tracking-tight leading-none">
                 <span className="bg-gradient-to-r from-red-900 via-red-800 to-red-900 bg-clip-text text-transparent drop-shadow-2xl" style={{fontFamily: 'serif'}}>
-                  EWU LIT-CARNIVAL
+                 Foodi Presents EWU LIT-CARNIVAL
                 </span>
               </h1>
               <div className="text-2xl sm:text-3xl md:text-4xl lg:text-4xl xl:text-5xl 2xl:text-6xl font-bold tracking-widest bg-gradient-to-r from-red-900 via-red-800 to-red-900 bg-clip-text text-transparent drop-shadow-2xl" style={{fontFamily: 'serif'}}>
@@ -196,7 +196,7 @@ const HeroSection = ({ mousePosition }) => {
               className="group relative w-full md:w-auto md:flex-1 px-6 py-4 sm:px-7 sm:py-5 md:px-6 md:py-3 lg:px-10 lg:py-6 xl:px-12 xl:py-8 bg-gradient-to-r from-red-900 via-red-800 to-red-900 text-amber-100 font-bold text-base sm:text-lg md:text-base lg:text-xl xl:text-2xl rounded-lg sm:rounded-xl shadow-2xl hover:shadow-red-900/50 transition-all duration-500 transform hover:-translate-y-1 hover:scale-105 overflow-hidden border-2 border-amber-200/60"
             >
               <span className="relative z-10 flex items-center justify-center space-x-2 sm:space-x-3 lg:space-x-3" style={{fontFamily: 'serif'}}>
-                <span>Register Now</span>
+                <span>Registration</span>
                 <ArrowRight className="w-5 h-5 sm:w-6 sm:h-6 md:w-5 md:h-5 lg:w-6 lg:h-6 xl:w-7 xl:h-7 group-hover:translate-x-1 transition-transform duration-300 flex-shrink-0" />
               </span>
               <div className="absolute inset-0 bg-gradient-to-r from-amber-700 to-red-700 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>

@@ -32,7 +32,7 @@ function Home() {
         <div className="relative mb-12">
           <div className="bg-gradient-to-r from-red-700 via-red-600 to-red-700 text-center py-8 px-12 rounded-lg shadow-2xl transform -rotate-1 hover:rotate-0 transition-transform duration-500">
             <h1 className="text-5xl md:text-6xl font-bold text-yellow-100 tracking-wider">
-              EWU LIT-CARNIVAL 2025
+             Foodi Presents <br></br> EWU LIT-CARNIVAL 2025
             </h1>
           </div>
           {/* Banner ribbons */}
@@ -205,7 +205,7 @@ function Home() {
               </div>
               
               <button className="mt-6 w-full bg-gradient-to-r from-red-600 to-red-700 text-white font-bold py-3 px-6 rounded-lg hover:from-red-700 hover:to-red-800 transform hover:scale-105 transition-all duration-300 shadow-lg">
-                Register Now
+                Register
               </button>
             </div>
           </div>

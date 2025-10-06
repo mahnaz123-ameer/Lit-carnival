@@ -65,7 +65,7 @@ const Sponsors = () => {
             <div className="inline-flex items-center gap-2 px-5 py-2 bg-white/80 backdrop-blur-md rounded-full shadow-lg mb-4">
               <Zap className="w-4 h-4 text-orange-500" fill="currentColor" />
               <h2 className="text-lg md:text-xl text-gray-800 font-bold">
-                EWU Lit-Carnival 2025
+              Foodi Presents <br></br>  EWU Lit-Carnival 2025
               </h2>
               <Zap className="w-4 h-4 text-orange-500" fill="currentColor" />
             </div>

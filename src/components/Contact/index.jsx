@@ -134,7 +134,7 @@ const ContactUs = () => {
               <Sparkles className="w-6 h-6 sm:w-8 sm:h-8 text-yellow-300 flex-shrink-0" />
               <div>
                 <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold">Contact Us</h1>
-                <p className="text-lg sm:text-xl text-orange-100">EWU Lit-Carnival 2025</p>
+                <p className="text-lg sm:text-xl text-orange-100"> Foodi Presents <br></br> EWU Lit-Carnival 2025</p>
               </div>
             </div>
             <div className="w-full sm:w-auto">

@@ -18,7 +18,7 @@ const HeroSection = ({ setCurrentPage, mousePosition, navigate }) => {
   
   // Countdown Timer Logic
   useEffect(() => {
-    const eventDate = new Date('2025-10-16T00:00:00').getTime();
+    const eventDate = new Date('2025-10-16T0:00:00').getTime();
     
     const updateCountdown = () => {
       const now = new Date().getTime();
@@ -95,7 +95,7 @@ const HeroSection = ({ setCurrentPage, mousePosition, navigate }) => {
   );
 
   return (
-    <div className="relative min-h-screen lg:h-[1300px] flex flex-col overflow-hidden" style={{backgroundColor: '#F5E6D3'}}>
+    <div className="relative min-h-screen lg:h-[1400px] flex flex-col overflow-hidden" style={{backgroundColor: '#F5E6D3'}}>
       {/* Background with Image Carousel - Reduced Overlay for Better Visibility */}
       <div className="absolute inset-0">
         {images.map((image, index) => (
@@ -158,7 +158,7 @@ const HeroSection = ({ setCurrentPage, mousePosition, navigate }) => {
             <div className="relative">
               <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl 2xl:text-8xl font-black mb-2 sm:mb-4 lg:mb-6 tracking-tight leading-none">
                 <span className="bg-gradient-to-r from-red-900 via-red-800 to-red-900 bg-clip-text text-transparent drop-shadow-2xl" style={{fontFamily: 'serif'}}>
-                  EWU LIT-CARNIVAL
+                  Foodi Presents <br></br>EWU LIT-CARNIVAL
                 </span>
               </h1>
               <div className="text-2xl sm:text-3xl md:text-4xl lg:text-4xl xl:text-5xl 2xl:text-6xl font-bold tracking-widest bg-gradient-to-r from-red-900 via-red-800 to-red-900 bg-clip-text text-transparent drop-shadow-2xl" style={{fontFamily: 'serif'}}>

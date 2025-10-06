@@ -24,7 +24,7 @@ const Footer = () => {
                 <BookOpen className="w-5 h-5 sm:w-6 sm:h-6 text-white" />
               </div>
               <div>
-                <h3 className="text-lg sm:text-xl md:text-2xl font-bold leading-tight">EWU Lit-Carnival</h3>
+                <h3 className="text-sm sm:text-xl md:text-lg font-bold leading-tight">Foodi Presents <br></br> EWU Lit-Carnival</h3>
                 <p className="text-sm sm:text-base text-white font-medium">2025</p>
               </div>
             </div>
