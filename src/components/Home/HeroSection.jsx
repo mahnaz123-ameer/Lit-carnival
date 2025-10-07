@@ -17,8 +17,8 @@ const HeroSection = ({ setCurrentPage, mousePosition, navigate }) => {
   const images = [litImage, litImage2, litImage3];
   
   // Countdown Timer Logic
-  useEffect(() => {
-    const eventDate = new Date('2025-10-16T0:00:00').getTime();
+ useEffect(() => {
+    const eventDate = new Date('2025-10-16T08:00:00').getTime();
     
     const updateCountdown = () => {
       const now = new Date().getTime();
