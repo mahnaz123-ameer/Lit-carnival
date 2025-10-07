@@ -95,7 +95,7 @@ const HeroSection = ({ setCurrentPage, mousePosition, navigate }) => {
   );
 
   return (
-    <div className="relative min-h-screen lg:h-[1400px] flex flex-col overflow-hidden" style={{backgroundColor: '#F5E6D3'}}>
+    <div className="relative min-h-screen lg:h-[1500px] flex flex-col overflow-hidden" style={{backgroundColor: '#F5E6D3'}}>
       {/* Background with Image Carousel - Reduced Overlay for Better Visibility */}
       <div className="absolute inset-0">
         {images.map((image, index) => (
