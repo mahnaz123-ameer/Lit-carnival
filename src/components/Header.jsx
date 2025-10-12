@@ -6,3 +6,4 @@ import Segments from './components/Segments';
 import Registration from './components/Registration';
 import About from './components/About';
 import Contact from './components/Contact';
+import ProgrammeShedule from './components/ProgrammeShedule';

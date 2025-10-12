@@ -4,6 +4,7 @@ import { useNavigate, useLocation } from 'react-router-dom';
 import logo from '../../assets/logo.jpeg';
 import mask from '../../assets/mask.png';
 
+
 // Mask Component using imported image
 const CarnivalMask = ({ className = "", size = "w-8 h-8", animated = false }) => (
   <img 
@@ -21,10 +22,11 @@ const Header = () => {
   const navigationItems = [
     { id: '/', label: 'Home', path: '/' },
     { id: 'segments', label: 'Segments', path: '/segments' },
-    { id: 'registration', label: 'Registration', path: '/registration' },
+    { id: 'programmeshedule', label: 'Programme Schedule', path: '/programmeshedule' },
     { id: 'about', label: 'About Us', path: '/about' },
     { id: 'sponsers', label: 'Sponsors', path: '/sponsers' },
-    { id: 'contact', label: 'Contact', path: '/contact' }
+    { id: 'contact', label: 'Contact', path: '/contact' },  
+    { id: 'registration', label: 'Registration', path: '/registration' }
     
   ];
 

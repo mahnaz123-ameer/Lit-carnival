@@ -2,20 +2,30 @@ import React from 'react';
 import { BookOpen, Sparkles, Star, Heart, Zap } from 'lucide-react';
 import Foodi from "../../assets/Foodi-logo-transparent.png";
 import mtb from "../../assets/mtb.png";
+import WingsLearningCentre from "../../assets/WingsLearningCentre.png";
 
 const Sponsors = () => {
   const sponsors = [
     {
       name: 'Foodi',
-      category: 'Food Partner',
+      category: 'Title Sponsor',
       description: '🍔 Fueling literary minds with delicious treats! Because every great story deserves a great meal. 📚✨',
-      tagline: 'A concern of US Bangla Group'
+      tagline: 'A concern of US Bangla Group',
+      logo: Foodi
     },
     {
       name: 'MTB',
-      category: 'Banking Partner',
+      category: 'Co-sponsor',
       description: '💫 Banking on creativity and innovation! Empowering dreams, one story at a time. 🌟',
-      tagline: 'Mutual Trust Bank PLC - Bank of the Year 2024'
+      tagline: 'Mutual Trust Bank PLC - Bank of the Year 2024',
+      logo: mtb
+    },
+    {
+      name: 'Wings Learning Centre',
+      category: 'Co-sponsor',
+      description: '🎓 Nurturing young minds and inspiring lifelong learners! Empowering students to soar to new heights. 📖✨',
+      tagline: 'Where Dreams Take Flight',
+      logo: WingsLearningCentre
     }
   ];
 
@@ -81,7 +91,7 @@ const Sponsors = () => {
               {sponsors.map((sponsor, index) => (
                 <div 
                   key={index}
-                  className="group relative"
+                  className={`group relative ${index === 2 ? 'lg:col-span-2 lg:max-w-2xl lg:mx-auto' : ''}`}
                 >
                   {/* Glow effect on hover */}
                   <div className="absolute inset-0 bg-gradient-to-r from-orange-400 to-red-400 rounded-3xl blur-xl opacity-0 group-hover:opacity-20 transition-opacity duration-500"></div>
@@ -101,19 +111,11 @@ const Sponsors = () => {
 
                     {/* Sponsor Logo */}
                     <div className="mb-6 flex justify-center items-center h-40">
-                      {sponsor.name === 'Foodi' ? (
-                        <img 
-                          src={Foodi} 
-                          alt="Foodi Logo" 
-                          className="w-64 h-40 object-contain group-hover:scale-110 transition-all duration-500 drop-shadow-xl"
-                        />
-                      ) : sponsor.name === 'MTB' ? (
-                        <img 
-                          src={mtb} 
-                          alt="MTB Logo" 
-                          className="w-64 h-40 object-contain group-hover:scale-110 transition-all duration-500 drop-shadow-xl"
-                        />
-                      ) : null}
+                      <img 
+                        src={sponsor.logo} 
+                        alt={`${sponsor.name} Logo`} 
+                        className="w-58 h-40 object-cover rounded-xl group-hover:scale-110 transition-all duration-500 drop-shadow-xl"
+                      />
                     </div>
 
                     {/* Sponsor Name */}

@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Clock, Users, Presentation, Mic, Theater, Palette, Sparkles, Calendar, BookOpen, ClipboardList } from 'lucide-react';
-
+import FoodiLogo from '../../assets/Foodi-logo-transparent.png';
+import EwuLogo from '../../assets/logo.png';
 const Segments = () => {
   const [activeTab, setActiveTab] = useState({});
 
@@ -97,7 +98,14 @@ const Segments = () => {
       {/* Header Section - Mobile Responsive */}
       <div className="relative overflow-hidden bg-gradient-to-r from-red-800 via-red-700 to-orange-600 text-white">
         <div className="absolute inset-0 bg-black bg-opacity-20"></div>
-        <div className="relative container mx-auto px-4 sm:px-6 py-12 sm:py-16">
+        
+        {/* Logo Section */}
+        <div className="relative container mx-auto px-4 sm:px-6 pt-4 sm:pt-6">
+        
+        </div>
+        
+        <div className="relative container mx-auto px-4 sm:px-6 pb-12 sm:pb-16">
+          
           <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-6 sm:mb-8">
             <div className="flex items-center space-x-3 sm:space-x-4 mb-4 sm:mb-0">
               <Theater className="w-6 h-6 sm:w-8 sm:h-8 text-yellow-300" />
@@ -126,9 +134,31 @@ const Segments = () => {
       </div>
 
       <div className="container mx-auto px-4 sm:px-6 py-12 sm:py-16">
+       
+        
         {/* Header - Mobile Responsive */}
         <div className="text-center mb-12 sm:mb-16">
-          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-amber-900 mb-3 sm:mb-4">Event Segments Overview</h2>
+            <div className="hidden sm:flex items-start justify-between mb-4 sm:mb-6">
+            {/* EWU Logo - Top Left */}
+            <div className=" p-2 sm:p-3">
+              <img 
+                src={EwuLogo} 
+                alt="EWU Logo" 
+                className="h-12 sm:h-16 lg:h-20 w-auto object-contain"
+              />
+            </div>
+            
+            {/* Foodi Logo - Top Right */}
+            <div className="  p-2 sm:p-3 ">
+              <img 
+                src={FoodiLogo} 
+                alt="Foodi Logo" 
+                className="h-12 sm:h-16 lg:h-20 w-auto object-contain"
+              />
+            </div>
+         
+        </div>
+        <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-amber-900 mb-3 sm:mb-4 lg:-mt-24">Event Segments Overview</h2>
           <p className="text-base sm:text-lg text-amber-700 max-w-2xl mx-auto px-4">
             Explore all five exciting segments of our literary carnival and find your perfect stage to shine.
           </p>

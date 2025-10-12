@@ -4,6 +4,8 @@ import CarnivalMask from './carnivalmask';
 import litImage from '../../assets/hero1.png';
 import litImage2 from '../../assets/hero2.png';
 import litImage3 from '../../assets/hero3.png';
+import FoodiLogo from '../../assets/Foodi-logo-transparent.png';
+import EwuLogo from '../../assets/logo.png';
 
 const HeroSection = ({ setCurrentPage, mousePosition, navigate }) => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
@@ -17,7 +19,7 @@ const HeroSection = ({ setCurrentPage, mousePosition, navigate }) => {
   const images = [litImage, litImage2, litImage3];
   
   // Countdown Timer Logic
- useEffect(() => {
+  useEffect(() => {
     const eventDate = new Date('2025-10-16T08:00:00').getTime();
     
     const updateCountdown = () => {
@@ -151,7 +153,23 @@ const HeroSection = ({ setCurrentPage, mousePosition, navigate }) => {
         ></div>
       )}
 
-      <div className="container mx-auto px-4 sm:px-6 lg:px-6 xl:px-8 text-center relative z-10 py-8 sm:py-12 md:py-16 lg:py-16 xl:py-20 flex-1 flex flex-col justify-center">
+      {/* Logo Headers - Aligned on Same Line with Max Width Container */}
+      <div className="absolute top-4 sm:top-6 md:top-8 left-0 right-0 z-20">
+        <div className="max-w-[1500px] mx-auto px-4 sm:px-6 md:px-8 flex justify-between items-center">
+          <img 
+            src={EwuLogo} 
+            alt="EWU Logo" 
+            className="h-10 sm:h-14 md:h-16 object-contain drop-shadow-lg hover:scale-105 transition-transform duration-300"
+          />
+          <img 
+            src={FoodiLogo} 
+            alt="Foodi Logo" 
+            className="h-10 sm:h-14 md:h-24 object-contain drop-shadow-lg hover:scale-105 transition-transform duration-300"
+          />
+        </div>
+      </div>
+
+      <div className="container mx-auto px-4 sm:px-6 lg:px-6 xl:px-8 text-center relative z-10 pt-20 pb-8 sm:pt-24 sm:pb-12 md:pt-28 md:pb-16 lg:pt-16 lg:pb-16 xl:pt-20 xl:pb-20 flex-1 flex flex-col justify-center">
         <div className="max-w-6xl mx-auto">
           {/* Vintage Carnival Title */}
           <div className="mb-8 sm:mb-10 md:mb-12 lg:mb-12 xl:mb-16 transform hover:scale-105 transition-all duration-700">
@@ -168,9 +186,9 @@ const HeroSection = ({ setCurrentPage, mousePosition, navigate }) => {
           </div>
           
           {/* Vintage Date Badge */}
-          <div className="inline-flex items-center space-x-3 sm:space-x-4 lg:space-x-4 bg-red-900/90 backdrop-blur-xl px-6 py-4 sm:px-8 sm:py-5 md:px-8 md:py-4 lg:px-10 lg:py-6 xl:px-12 xl:py-8 rounded-xl shadow-2xl mb-8 sm:mb-10 md:mb-12 lg:mb-12 xl:mb-16 border-2 border-amber-200/60 hover:bg-red-800/90 transition-all duration-500 group">
-            <Calendar className="w-6 h-6 sm:w-7 sm:h-7 md:w-6 md:h-6 lg:w-8 lg:h-8 xl:w-10 xl:h-10 text-amber-100 group-hover:scale-110 transition-transform flex-shrink-0" />
-            <span className="text-lg sm:text-xl md:text-lg lg:text-2xl xl:text-3xl 2xl:text-4xl font-bold text-amber-100" style={{fontFamily: 'serif'}}>
+          <div className="inline-flex items-center space-x-2 sm:space-x-3 md:space-x-3 lg:space-x-4 bg-red-900/90 backdrop-blur-xl px-4 py-3 sm:px-8 sm:py-5 md:px-8 md:py-4 lg:px-10 lg:py-6 xl:px-12 xl:py-8 rounded-xl shadow-2xl mb-8 sm:mb-10 md:mb-12 lg:mb-12 xl:mb-16 border-2 border-amber-200/60 hover:bg-red-800/90 transition-all duration-500 group">
+            <Calendar className="w-5 h-5 sm:w-7 sm:h-7 md:w-6 md:h-6 lg:w-8 lg:h-8 xl:w-10 xl:h-10 text-amber-100 group-hover:scale-110 transition-transform flex-shrink-0" />
+            <span className="text-base sm:text-xl md:text-lg lg:text-2xl xl:text-3xl 2xl:text-4xl font-bold text-amber-100" style={{fontFamily: 'serif'}}>
               16 OCTOBER 2025
             </span>
           </div>
@@ -178,8 +196,8 @@ const HeroSection = ({ setCurrentPage, mousePosition, navigate }) => {
           {/* Countdown Timer - Better Mobile Spacing */}
           <div className="mb-8 sm:mb-10 md:mb-12 lg:mb-12 xl:mb-16 w-full">
             <div className="flex items-center justify-center mb-4 sm:mb-5 lg:mb-6">
-              <Clock className="w-5 h-5 sm:w-6 sm:h-6 md:w-6 md:h-6 lg:w-8 lg:h-8 text-red-900 mr-3 flex-shrink-0" />
-              <h3 className="text-lg sm:text-xl md:text-lg lg:text-2xl xl:text-3xl font-bold text-red-900" style={{fontFamily: 'serif'}}>
+              <Clock className="w-4 h-4 sm:w-6 sm:h-6 md:w-6 md:h-6 lg:w-8 lg:h-8 text-red-900 mr-2 sm:mr-3 flex-shrink-0" />
+              <h3 className="text-base sm:text-xl md:text-lg lg:text-2xl xl:text-3xl font-bold text-red-900" style={{fontFamily: 'serif'}}>
                 Event Countdown
               </h3>
             </div>
@@ -227,7 +245,7 @@ const HeroSection = ({ setCurrentPage, mousePosition, navigate }) => {
             >
               <span className="relative z-10 flex items-center justify-center space-x-2 sm:space-x-3 lg:space-x-3" style={{fontFamily: 'serif'}}>
                 <span>Register Now</span>
-                <ArrowRight className="w-5 h-5 sm:w-6 sm:h-6 md:w-5 md:h-5 lg:w-6 lg:h-6 xl:w-7 xl:h-7 group-hover:translate-x-1 transition-transform duration-300 flex-shrink-0" />
+                <ArrowRight className="w-4 h-4 sm:w-6 sm:h-6 md:w-5 md:h-5 lg:w-6 lg:h-6 xl:w-7 xl:h-7 group-hover:translate-x-1 transition-transform duration-300 flex-shrink-0" />
               </span>
               <div className="absolute inset-0 bg-gradient-to-r from-amber-700 to-red-700 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
             </button>
@@ -237,9 +255,9 @@ const HeroSection = ({ setCurrentPage, mousePosition, navigate }) => {
               className="group w-full md:w-auto md:flex-1 px-6 py-4 sm:px-7 sm:py-5 md:px-6 md:py-3 lg:px-10 lg:py-6 xl:px-12 xl:py-8 bg-amber-50/95 backdrop-blur-xl text-red-900 border-2 border-red-900/60 font-bold text-base sm:text-lg md:text-base lg:text-xl xl:text-2xl rounded-lg sm:rounded-xl shadow-xl hover:bg-amber-100/95 hover:border-red-900/80 transition-all duration-500 transform hover:-translate-y-1"
             >
               <span className="flex items-center justify-center space-x-2 sm:space-x-3 lg:space-x-3" style={{fontFamily: 'serif'}}>
-                <BookOpen className="w-5 h-5 sm:w-6 sm:h-6 md:w-5 md:h-5 lg:w-6 lg:h-6 xl:w-7 xl:h-7 flex-shrink-0" />
+                <BookOpen className="w-4 h-4 sm:w-6 sm:h-6 md:w-5 md:h-5 lg:w-6 lg:h-6 xl:w-7 xl:h-7 flex-shrink-0" />
                 <span>Explore Segments</span>
-                <Play className="w-4 h-4 sm:w-5 sm:h-5 md:w-4 md:h-4 lg:w-5 lg:h-5 xl:w-6 xl:h-6 group-hover:translate-x-1 transition-transform duration-300 flex-shrink-0" />
+                <Play className="w-3 h-3 sm:w-5 sm:h-5 md:w-4 md:h-4 lg:w-5 lg:h-5 xl:w-6 xl:h-6 group-hover:translate-x-1 transition-transform duration-300 flex-shrink-0" />
               </span>
             </button>
           </div>

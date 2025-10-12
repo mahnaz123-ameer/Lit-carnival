@@ -12,6 +12,8 @@ import Registration from './components/Registration/index';
 import About from './components/About/index';
 import Contact from './components/Contact/index';
 import Sponsors from "./components/Sponsers";
+import  ProgrammeShedule from "./components/ProgrammeShedule"
+
 
 function App() {
   const queryClient = new QueryClient();
@@ -26,10 +28,11 @@ function App() {
               <Route path="/" element={<Home />} />
               <Route path="/home" element={<Home />} />
               <Route path="/segments" element={<Segments />} />
-              <Route path="/registration" element={<Registration />} />
+              <Route path="/programmeshedule" element={<ProgrammeShedule />} />
               <Route path="/about" element={<About />} />
               <Route path="/contact" element={<Contact />} />
                <Route path="/sponsers" element={<Sponsors />} />
+               <Route path="/registration" element={<Registration />} />
               {/* Add more routes here as needed */}
             </Routes>
           </main>
