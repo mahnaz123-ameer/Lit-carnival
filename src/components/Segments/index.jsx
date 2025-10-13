@@ -153,7 +153,7 @@ const Segments = () => {
               <img 
                 src={FoodiLogo} 
                 alt="Foodi Logo" 
-                className="h-12 sm:h-16 lg:h-20 w-auto object-contain"
+                className="h-32 sm:h-16 lg:h-32 w-auto object-contain"
               />
             </div>
          

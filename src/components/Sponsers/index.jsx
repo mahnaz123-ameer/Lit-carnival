@@ -22,7 +22,7 @@ const Sponsors = () => {
     },
     {
       name: 'Wings Learning Centre',
-      category: 'Co-sponsor',
+      category: 'Segment Patner',
       description: '🎓 Nurturing young minds and inspiring lifelong learners! Empowering students to soar to new heights. 📖✨',
       tagline: 'Where Dreams Take Flight',
       logo: WingsLearningCentre

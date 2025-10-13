@@ -164,7 +164,7 @@ const HeroSection = ({ setCurrentPage, mousePosition, navigate }) => {
           <img 
             src={FoodiLogo} 
             alt="Foodi Logo" 
-            className="h-10 sm:h-14 md:h-24 object-contain drop-shadow-lg hover:scale-105 transition-transform duration-300"
+            className="h-32 sm:h-14 md:h-32 object-contain drop-shadow-lg hover:scale-105 transition-transform duration-300"
           />
         </div>
       </div>
