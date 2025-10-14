@@ -148,20 +148,18 @@ const Footer = () => {
         </div>
         
         {/* Bottom Section */}
-        <div className="border-t border-white border-opacity-20 mt-6 sm:mt-8 lg:mt-10 pt-4 sm:pt-6">
-          <div className="flex flex-col sm:flex-row justify-between items-center space-y-3 sm:space-y-0 text-center sm:text-left">
-            <div className="order-2 sm:order-1">
+                  <div className="order-1 sm:order-2">
               <p className="text-sm sm:text-base text-gray-200">
-                &copy; 2025 Department of English, East West University . All rights reserved.
+               Developed by <a 
+                 href="https://mahnaz123-ameer.github.io/" 
+                 target="_blank" 
+                 rel="noopener noreferrer"
+                 className="font-bold hover:text-yellow-300 transition-colors duration-300 hover:underline"
+               >
+                 Mahnaz Ameer
+               </a>
               </p>
             </div>
-            <div className="order-1 sm:order-2">
-              <p className="text-sm sm:text-base text-gray-200">
-               {/* Developed by <strong> Mahnaz Ameer </strong> */}
-              </p>
-            </div>
-          </div>
-        </div>
       </div>
       
       {/* Enhanced Decorative Elements - Responsive */}
