@@ -3,7 +3,6 @@ import { Calendar, Clock, DollarSign, Mail, Phone, CheckCircle, AlertCircle, Ext
 
 const Registration = () => {
   const [selectedSegments, setSelectedSegments] = useState([]);
-  const [showVisitorMessage, setShowVisitorMessage] = useState(false);
 
   const segments = [
     { 
@@ -73,8 +72,7 @@ const Registration = () => {
   };
 
   const handleVisitorRegistration = () => {
-    setShowVisitorMessage(true);
-    setTimeout(() => setShowVisitorMessage(false), 3000);
+    window.open('https://docs.google.com/forms/d/e/1FAIpQLSfUjPadEd2NMz-6kkgOLvTPRIe-FcVJfuZ4YE01g4fe3sEsHQ/viewform?usp=sharing&ouid=115401286924735990256', '_blank');
   };
 
   const handleRegistrationClick = () => {
@@ -132,21 +130,12 @@ const Registration = () => {
               <p className="text-sm text-orange-100">Register to compete in the events</p>
             </div>
             <div 
-              className="bg-white bg-opacity-20 rounded-lg p-4 sm:p-6 backdrop-blur-sm border border-amber-200 cursor-pointer hover:bg-opacity-30 transition-all duration-300 transform hover:scale-105 relative"
+              className="bg-white bg-opacity-20 rounded-lg p-4 sm:p-6 backdrop-blur-sm border border-amber-200 cursor-pointer hover:bg-opacity-30 transition-all duration-300 transform hover:scale-105"
               onClick={handleVisitorRegistration}
             >
               <Clock className="w-8 h-8 sm:w-10 sm:h-10 mx-auto mb-2 sm:mb-3 text-yellow-300" />
               <div className="font-bold text-base sm:text-lg mb-1">Visitor Registration</div>
               <p className="text-sm text-orange-100">Register to attend as spectator</p>
-              
-              {showVisitorMessage && (
-                <div className="absolute inset-0 bg-amber-600 bg-opacity-95 rounded-lg flex items-center justify-center backdrop-blur-sm">
-                  <div className="text-center p-2">
-                    <AlertCircle className="w-6 h-6 mx-auto mb-2 text-white" />
-                    <p className="font-semibold text-white text-sm">Will be available soon</p>
-                  </div>
-                </div>
-              )}
             </div>
           </div>
         </div>
@@ -264,7 +253,7 @@ const Registration = () => {
                 <li>• Multiple segment participation is allowed.</li>
                 <li>• Participants must make a separate payment for each registration.</li>
                 <li>• Posters should be hand-made; however, printed or decorative elements may be added.</li>
-                <li>• Cosplay and Comic-Con participants must wear costumes that are appropriate to the event’s standards.</li>
+                <li>• Cosplay and Comic-Con participants must wear costumes that are appropriate to the event's standards.</li>
                  <li>• The final segment, Masquerade, is not competitive but requires prior registration.</li>
                   <li>• Spot registration will not be available for participants but will be open for visitors only.</li>
               </ul>
@@ -281,9 +270,6 @@ const Registration = () => {
             </div>
           </div>
         </div>
-
-        {/* Contact Information - Mobile Responsive Grid */}
-       
       </div>
     </div>
   );
